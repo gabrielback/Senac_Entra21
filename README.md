@@ -10,4 +10,15 @@ git add
 git commit -m "descrição"
 git push
 
+
+```
+
+#Comandos básicos para enviar/trazer
+código entre o remoto e o local 
+
+```bash
+
+git push origin main # envia do local para o remoto
+git pull origin main # traz do remoto para o local
+
 ```

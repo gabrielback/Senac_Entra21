@@ -22,5 +22,23 @@ código entre o remoto e o local
 git push origin main # envia do local para o remoto
 git pull origin main # traz do remoto para o local
 
+# Documentação 
+# https://www.markdownguide.org/cheat-sheet/
 
 ```
+
+## Logos
+![Git](imagens/git.png)
+
+## Páginas
+[Scrum](scrum.md)
+
+[Kamban](kamban.md)
+
+[comandos Basicos de guit](comandos_basicos.md)
+
+## Fontes
+
+documentação da linguagem [markdonw](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+

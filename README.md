@@ -21,4 +21,5 @@ código entre o remoto e o local
 git push origin main # envia do local para o remoto
 git pull origin main # traz do remoto para o local
 
+
 ```

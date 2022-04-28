@@ -47,3 +47,7 @@ Texto do github
 Texto legal
 
 Texto do github
+
+Texto legal
+
+Texto do github

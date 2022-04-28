@@ -1,0 +1,25 @@
+git init -> inicializa uma pasta com o git 
+git add nome_do_arquivo -> adiciona os arquivos para serem versionados 
+git commit -m "uma mensagem"
+cria uma nova versão do codigo
+
+git branch -M 'main' => altera o nome da branch para main
+
+
+(vi/vim) - editor de texto para usar em um terminal linux (-pesquisa)
+
+Quando abrir o VI, caso não se use o -m com a mensagem no git commit
+
+apertar a tecla i 
+digita a mensagem apertar a tecla ESC
+:wq
+git remote add origin 
+link_do_projeto_no_github
+
+git config --global user.name "Nome Aqui"
+git config --global user.email "Email Aqui"
+git add
+git commit -m "descrição"
+git push (envia codigo local para remoto)
+git pull origin nome_da_branch -> traz codigo alterado do remoto para o local
+

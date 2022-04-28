@@ -28,8 +28,7 @@ git pull origin main # traz do remoto para o local
 ```
 
 ## Logos
-![Git](imagens/git.png)
-
+![Imagem da logo](imagens/git.png)
 ## Páginas
 [Scrum](scrum.md)
 
@@ -39,7 +38,4 @@ git pull origin main # traz do remoto para o local
 
 ## Fontes
 
-documentação da linguagem [markdonw](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
-
-![Google](https://th.bing.com/th/id/R.f1834382e03ae55550d635fb325367e0?rik=Hyl62Tjbi7l%2fTA&pid=ImgRaw&r=0)
+Documentação da linguagem [markdonw](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

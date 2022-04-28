@@ -24,3 +24,6 @@ git push (envia codigo local para remoto)
 git pull origin nome_da_branch -> traz codigo alterado do remoto para o local
 
 ; Resolvendo conflitos
+
+Quando está diferente no github, devemos trazer os arquivos do github para o local
+

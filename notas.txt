@@ -23,3 +23,4 @@ git commit -m "descrição"
 git push (envia codigo local para remoto)
 git pull origin nome_da_branch -> traz codigo alterado do remoto para o local
 
+; Resolvendo conflitos

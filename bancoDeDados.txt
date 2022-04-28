@@ -1,0 +1,27 @@
+modelagem de sistemas
+
+banco de dados
+
+claudia.werlich@prof.sc.br
+
+Banco de dados
+
+modelagem de banco de daddoss para aplicações web: utilização das estruturas conceitual lógica e fisica.
+
+modelo entidadde e relacionamento:
+
+linguagem SQL:
+
+SGBD - Sistema gerenciador de banco de dados 
+
+incluir 
+alterar 
+consultar
+apagar os dados previamente armazenados
+
+
+estudar
+
+Oracle 
+Mysql 
+SQL Server

@@ -11,4 +11,4 @@
 guest01@alunos.sc.senac.br
 
 ```
-[Login Senac](senac.sc/0Ho83E)
+[Login Senac](https://senac.sc/0Ho83E)

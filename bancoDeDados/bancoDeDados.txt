@@ -28,6 +28,3 @@ SQL Server
 
 Tabela: São conjuntos lógicos d registros.
 
-
-
-P

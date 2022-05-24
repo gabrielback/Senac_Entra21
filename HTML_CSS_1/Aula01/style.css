@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 40px 48px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left , rgba(255,0,0,.2), rgba(255,0,0,.6));
+}
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+}
+
+th {
+    background-color: blue;
+}
+
+
+tr :hover {
+
+    background-color: #F00;
+
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #090;
+}
+
+
+#teste {
+    color: #F00;
+}
+
+#myProgress {
+    background-color: grey;
+}
+
+#myBar {
+    margin: 50px 0 0 0;
+    width: 1%;
+    height: 25px;
+    background-color: green;
+}
+
+#myProgress {
+    width: 50%;
+}

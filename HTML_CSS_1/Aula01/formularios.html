@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Aula02/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+  <h1>Elemento de navegação</h1>
+  <p>Link para nevegação</p>
+
+  <nav>
+      <a href="../Aula01/formularios.html">Formulários</a> |
+      <a href="../Aula02/semantica.html">Semântica</a> |
+      <a href="../Aula01/tabelas.html">Tabelas</a> |
+      <a href="https://www.w3schools.com/">W3Schools</a>
+  </nav>
+    <h1>Formulários</h1>
+    <form action="/" method="post">
+        <label for="nome">Nome</label><br>
+        <input type="text" name="nome" placeholder="Nome"><br>
+        <label for="lastName">Segundo nome</label><br>
+        <input type="text" placeholder="Sobrenome"><br>
+        <br>
+        <h2 id="teste">O que achou do site?</h2>
+        <br>
+        <input type="radio" name="opcao">Muito bom
+        <input type="radio" name="opcao">Regular
+        <input type="radio" name="opcao">Ruim
+        <br>
+        <br>
+        <h2>Como está o clima hoje?</h2>
+        <br>
+        <br>
+        <input type="radio" name="clima">Muito bom
+        <input type="radio" name="clima">Regular
+        <input type="radio" name="clima">Ruim
+        <br>
+        <br>
+        <h2>Qual a seção você mais gostou?</h2>
+        <br>
+        <br>
+        <label for="secao"></label>
+        <select name="secao">
+            <option selected></option>
+            <option value="cartaz">Em cartaz</option>
+            <option value="Animacao">Animação</option>
+            <option value="romance">Romance</option>
+        </select>
+        <label for="outra">Outra</label>
+        <input type="text" name="outra">
+
+        <br>
+        <br>
+        <textarea name="areaTexto"
+        cols="100%"
+        rows="10"
+        maxlength="180"
+        
+        placeholder="Digite um texto"></textarea>
+        <br>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <br><br>
+        <!-- <input type="button" name="btn_Botao" value="Botão"> -->
+        <button onclick="move()" name="btn_Botao">Carregar</button> 
+        <!-- <input type="submit" name="btn_Send" value="Enviar"> -->
+        <input type="reset" name="btn_Clear" value="Cancelar">
+        
+        <a href="" onclick="move()">
+            <div id="submit" class="button">Submit</div>
+        </a>
+        <a>
+            <div id="cancel" class="button">cancel</div>
+        </a>
+        
+        
+    </form>
+
+    
+
+
+    <script>
+
+var i = 0;
+
+function move() {
+
+  event.preventDefault()
+
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+} 
+    </script>
+
+</body>
+
+
+
+</html>

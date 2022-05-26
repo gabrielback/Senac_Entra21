@@ -1,0 +1,29 @@
+programa
+{
+    funcao inicio()
+    {
+	inteiro valorInteiro, indiceInteiro
+    real    valorReal, indiceReal
+    
+    indiceInteiro = 5
+    indiceReal = 5
+    
+	valorInteiro = indiceInteiro - 2*(indiceInteiro/2)
+	escreva ("Inteiro: "+valorInteiro)
+	
+	escreva("\n")
+	escreva(indiceInteiro - 2*(indiceInteiro/2))
+	escreva("\n--------------------------------------------\n")
+
+	
+	valorReal = indiceReal - 2*(indiceReal/2)
+	escreva ("Real: "+valorReal)
+
+	escreva("\n")
+	escreva(indiceReal - 2*(indiceReal/2))
+	escreva("\n--------------------------------------------\n")
+
+    }
+}
+
+

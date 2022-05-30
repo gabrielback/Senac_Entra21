@@ -1,3 +1,5 @@
+//https://portugol-webstudio.cubos.io/ide
+
 programa
 {
     funcao inicio()

@@ -5,7 +5,7 @@
     * Este repositório tem como objetivo, armazenar o conteúdo aprendido em sala.
 ## Matérias
 
-* [HTML & CSS](HTML_CSS_1/)
+* [HTML & CSS](HTML_CSS/)
 * [Github](Github/)
 * [Banco de Dados](bancoDeDados/)
 * [Lógica](Logica/)

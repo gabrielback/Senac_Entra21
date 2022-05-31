@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div, #div1, #div2, #div3{
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            border-radius: 10px;
+            margin: 2px;
+            font-size: 2em;
+        }
+        div div:hover{
+            filter: blur(1px);
+        }
+        #div1{
+            background-color: red;
+        }
+        #div2{
+            background-color: green;
+        }
+        #div3{
+            background-color: blue;
+        }
+        #container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+    </div>
+</body>
+</html>

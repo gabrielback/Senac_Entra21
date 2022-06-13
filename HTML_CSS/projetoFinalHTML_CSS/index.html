@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="./img/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle botao">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a class="selected" href="#inicio"
+                    onclick="select(this)"
+                    onclick="openPage('mainArticle', 'main.html')" >Início</a>
+                </li>
+                <li>
+                    <a href="#cursos"
+                    onclick="openPage('mainArticle', 'cursos.html')" >Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre"
+                    onclick="openPage('mainArticle', 'sobre.html')" >Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato"
+                    onclick="openPage('mainArticle', 'contato.html')" >Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+    <article id="mainArticle">
+        <!-- <h1>Gabriel Luiz Back</h1> -->
+        <!-- <p><strong>Olá...</strong></p>
+        <p>Essa página tem como objetivo, mostrar um pouco da minha história, objetivos e hobbies, bem como mostrar o domínio do conteúdo aprendido em sala no programa Entra21, ministrado pelo Senac de Joinville.</p> -->
+        
+        
+    </article>
+    <script src="./js/index.js"></script>
+    <script>
+        
+window.onhashchange = function(e) {
+    const oldURL = e.oldURL.split('#')[1]
+    const newURL = e.newURL.split('#')[1]
+     const oldLink = document.querySelector(`.menu [href='#${oldURL}']`)
+     const newLink = document.querySelector(`.menu [href='#${newURL}']`)
+     oldLink && oldLink.classList.remove('selected') // remove a classe selected
+     newLink && newLink.classList.add('selected') // add a classe selected que por sua vez mantem o item selecionado conforme #CSS    
+}
+    </script>
+</body>
+
+
+</html>

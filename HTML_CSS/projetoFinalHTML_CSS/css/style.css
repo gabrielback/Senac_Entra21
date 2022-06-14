@@ -1,12 +1,34 @@
-
-
 body {
+    padding-top: 80px;
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    background: linear-gradient(to right, rgb(189, 195, 199), rgb(44, 62, 80));
+    background: linear-gradient(to right, rgb(165, 183, 194), rgb(44, 102, 124));
+    height: 100vmax;
+}
+
+#artigo {
+    left: 30px;
+    position: relative;
+    animation-name: artigo;
+    animation-duration: 1s;
 }
 
 
+@keyframes artigo {
+    0%   {left: 0px;}
+    100%   {left:30px;}
+}
 
 
-
+footer {
+    background: #444;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    padding-top: 20px;
+    height: 60px;
+    border-top: solid 5px #4faddb;
+}

@@ -1,19 +1,12 @@
 let mainArticle = document.getElementById('artigo')
 artigo.innerHTML = openPage('artigo', 'main.html')
 
-const selectElement = () => {
-    let li = document.querySelectorAll('ul>li>a')
-    
-    li.forEach(element => {
-        element.addEventListener('click', () => {
-            let selectedElement = document.querySelector('.selected')
-            selectedElement.classList.remove('selected')
-            element.classList.add('selected')
-        })
-    })
+const headerList = document.querySelectorAll('li>a')
+headerList.forEach((e) => e.addEventListener("click", () => {
+    document.querySelector('.selected').classList.remove('selected')
+    e.classList.add('selected')
 }
-
-// selectElement()
+))
 
 function openPage(element, url) {
     url = `./pages/${url}`

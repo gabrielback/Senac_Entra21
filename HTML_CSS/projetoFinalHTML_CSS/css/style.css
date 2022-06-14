@@ -9,15 +9,15 @@ body {
 #artigo {
     left: 30px;
     position: relative;
-    animation-name: artigo;
-    animation-duration: 1s;
+    /* animation-name: artigo;
+    animation-duration: 1s; */
 }
 
-
+/* 
 @keyframes artigo {
     0%   {left: 0px;}
     100%   {left:30px;}
-}
+} */
 
 
 footer {

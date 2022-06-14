@@ -16,8 +16,11 @@ function openPage(element, url) {
             document.getElementById(element).innerHTML = xml.responseText
         }
     }
+    
+    $('article').hide().fadeIn(500)
     xml.open("GET", url, true)
     xml.send()
+    
 }
 
 

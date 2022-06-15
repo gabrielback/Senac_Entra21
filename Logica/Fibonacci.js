@@ -13,7 +13,6 @@ const fibonacci = (...spread) => {                                              
 }
 console.log(fibonacci(...inputData))                                            // Invoca e retorna a fução fibonacci em forma de texto através do console
 
-
 // Resolução 2
 
 
@@ -33,15 +32,16 @@ console.log(fibonacci(...inputData))                                            
 
 
 // const fibonacci = (nthTerm) => {
-//     let currentNumber = 0
-//     let nextNumber = 1
-//     let sum =1
-//     for (let i = 1; i <= nthTerm; i++) {
-//         console.log(`${i}º nthTerm = ${sum}`)
-//         sum += currentNumber
-//         currentNumber = nextNumber
-//         nextNumber = sum
+    // let currentNumber = 0
+    // let nextNumber = 1
+    // let sum =1
+    // for (let i = 1; i <= nthTerm; i++) {
+    //     console.log(`${i}º nthTerm = ${sum}`)
+    //     sum += currentNumber
+    //     currentNumber = nextNumber
+    //     nextNumber = sum
         
 //       } 
 // }
 // fibonacci(15)
+

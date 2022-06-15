@@ -17,10 +17,13 @@ function openPage(element, url) {
         }
     }
     
-    $('article').hide().fadeIn(500)
     xml.open("GET", url, true)
     xml.send()
     
+    $('article')
+    .hide()
+    .fadeIn(500)
+
 }
 
 

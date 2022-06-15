@@ -1,14 +1,16 @@
 body {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     margin: 0;
     font-family: 'Oswald', sans-serif;
     background: linear-gradient(to right, rgb(165, 183, 194), rgb(44, 102, 124));
-    height: 100vmax;
+    /* height: 80vmax; */
 }
 
 #artigo {
     left: 30px;
-    position: relative;
+    /* position: relative; */
+    /* height: auto; */
+    /* margin-top: 80px; */
     /* animation-name: artigo;
     animation-duration: 1s; */
 }
@@ -18,7 +20,6 @@ body {
     0%   {left: 0px;}
     100%   {left:30px;}
 } */
-
 
 footer {
     background: #444;
@@ -31,4 +32,12 @@ footer {
     padding-top: 20px;
     height: 60px;
     border-top: solid 5px #4faddb;
+}
+
+
+footer img {
+    float: right;
+    margin: 20px 10px 0 0;
+    width: 30px;
+    border-radius: 50%;
 }

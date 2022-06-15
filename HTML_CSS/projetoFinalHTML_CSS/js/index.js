@@ -22,7 +22,7 @@ function openPage(element, url) {
     
     $('article')
     .hide()
-    .fadeIn(500)
+    .fadeIn(700)
 
 }
 

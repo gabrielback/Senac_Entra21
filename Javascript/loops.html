@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    #lista {
+        text-align: center;
+        display: flex;
+        width: max-content;
+        padding-left: 20px;
+    }
+    
+    .ulLista {
+        margin: 20px;
+        border-radius: 20px;
+        border: 2px solid #c8c8c8;
+        padding: 20px;
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+    
+    .deletar {
+        margin: 1px solid #fff;
+        cursor: pointer;
+        color: red;
+    }
+
+</style>
+
+<body>
+    <ul id="lista">
+
+    </ul>
+    <button type="button" onclick="addItem()">Adicionar Item</button>
+    <script type="text/javascript">
+        const ulLista = document.getElementById('lista')
+
+        const addItem = () => {
+
+            const valor = Number(prompt('Informe um item para adicionar a lista'));
+            
+            if(valor != null && valor != undefined && valor > 0) {
+
+                let lista = ''
+    
+                lista += '<ul class="ulLista">'
+                lista += `<h2>Valor Digitado: ${valor} <span class="deletar" onclick="remover(this)">Deletar</span></h2>`
+    
+                for (let i = 0; i <= 10; i++) {
+                    lista += `<li>${valor} x ${i} = ${valor * i}</li>`
+                }
+                lista += '</ul>'
+                ulLista.innerHTML += lista
+            }else{
+
+                alert('não é um numero')
+            }
+
+            }
+     
+        const remover = (element) => {
+            
+            const confirma = confirm('Deseja apagar?')
+            confirma ? element.parentNode.parentNode.innerHTML = null & alert('Conteúdo removido com sucesso!') : alert('Conteúdo não foi removido') 
+            console.log(element.parentNode.parentNode)
+        };
+
+    </script>
+</body>
+
+</html>

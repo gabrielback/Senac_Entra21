@@ -1,23 +1,24 @@
-let mainArticle = document.getElementById('artigo')
 artigo.innerHTML = openPage('artigo', 'main.html')
 
 const headerList = document.querySelectorAll('li>a')
-headerList.forEach((e) => e.addEventListener("click", () => {
+headerList.forEach((navButton) => navButton.addEventListener("click", () => {
     document.querySelector('.selected').classList.remove('selected')
-    e.classList.add('selected')
+    navButton.classList.add('selected')
 }
 ))
 
-function openPage(element, url) {
-    url = `./pages/${url}`
+
+// AJAX
+function openPage(tagName, pageHTML) {
+    pageHTML = `./pages/${pageHTML}`
     var xml = new XMLHttpRequest()
     xml.onreadystatechange = function () {
         if (xml.readyState == 4 && xml.status == 200) {
-            document.getElementById(element).innerHTML = xml.responseText
+            document.getElementById(tagName).innerHTML = xml.responseText
         }
     }
     
-    xml.open("GET", url, true)
+    xml.open("GET", pageHTML, true)
     xml.send()
     
     $('article')

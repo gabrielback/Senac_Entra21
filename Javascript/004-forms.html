@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms</title>
+    <style type="text/css">
+        form {
+            margin-left: 25%;
+        }
+
+        .input-form {
+            padding: 10px;
+        }
+
+        div:not(.input-form):NOT(.erro){
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form name="form-login" id="formulario">
+        <div class="input-form">
+            <label>Login</label>
+            <input type="text" id="login">
+        </div>
+        <div class="input-form">
+            <label>Senha</label>
+            <input type="password" id="senha">
+        </div>
+        <div class="input-form">
+            <button type="button" onclick="realizarLogin()">Entrar</button>
+        </div>
+    </form>
+    <script type = "text/javascript">
+
+        const testeVerificarLogin = (login, senha) => {
+            const element = document.getElementById('formulario')
+            
+            if(login == 'gabriel@gmail.com' && senha == ''){                // alert('Bem vindo, '+login+' você está logado'.toLowerCase());
+
+            let msg = 'Bem vindo, '+login+' você está logado'.toLowerCase();                //Crie uma div e mostre a mensagem no canto superior direito.
+            let divLogado = `<div class="logado">${msg}</div>`    
+            element.innerHTML += divLogado
+            
+            
+        }else {
+            let msg = 'Credenciais inválidas'.toUpperCase()
+            let divInvalido = `<div class="erro">${msg}</div>`    
+                element.innerHTML += divInvalido
+
+            }
+        }
+        const realizarLogin = () => {
+            const inputLogin = document.getElementById('login')
+            const inputSenha = document.getElementById('senha')
+            const login = inputLogin.value
+            const senha = inputSenha.value
+            console.log(login, senha)
+
+            const validarInputs = (login, senha, inputLogin, inputSenha) => {
+
+                
+                if(!login.includes('@') || !login.includes('.')) { 
+                alert("Login Inválido!")
+                inputLogin.style.borderColor = "red"
+                inputLogin.style.color = "red"
+                
+            }
+            
+            if(senha == "" && senha == undefined) {
+                
+                inputSenha.style.borderColor = "red"
+                inputSenha.style.color = "red"
+            }else {
+                
+                testeVerificarLogin(login, senha)
+            }
+        }
+        validarInputs(login, senha)
+            
+        
+    }
+        
+    </script>
+</body>
+</html>

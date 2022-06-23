@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,23 +14,21 @@
             padding: 10px;
         }
 
-        div:not(.input-form):NOT(.erro){
+        div:not(.input-form):NOT(.erro) {
             background-color: green;
             position: absolute;
             top: 0;
             right: 0;
             width: 250px;
         }
-
-
-
     </style>
 </head>
+
 <body>
-    <form name="form-login" id="formulario">
+    <form name="form-login" id="form">
         <div class="input-form">
             <label>Login</label>
-            <input type="text" id="login">
+            <input type="text" id="login" value="gabriel@gmail.com">
         </div>
         <div class="input-form">
             <label>Senha</label>
@@ -39,57 +38,64 @@
             <button type="button" onclick="realizarLogin()">Entrar</button>
         </div>
     </form>
-    <script type = "text/javascript">
+    <script type="text/javascript">
 
-        const testeVerificarLogin = (login, senha) => {
-            const element = document.getElementById('formulario')
-            
-            if(login == 'gabriel@gmail.com' && senha == ''){                // alert('Bem vindo, '+login+' você está logado'.toLowerCase());
-
-            let msg = 'Bem vindo, '+login+' você está logado'.toLowerCase();                //Crie uma div e mostre a mensagem no canto superior direito.
-            let divLogado = `<div class="logado">${msg}</div>`    
-            element.innerHTML += divLogado
-            
-            
-        }else {
-            let msg = 'Credenciais inválidas'.toUpperCase()
-            let divInvalido = `<div class="erro">${msg}</div>`    
-            element.innerHTML += divLogado
-
-
-            }
-        }
         const realizarLogin = () => {
+            
             const inputLogin = document.getElementById('login')
             const inputSenha = document.getElementById('senha')
             const login = inputLogin.value
             const senha = inputSenha.value
-            console.log(login, senha)
 
             const validarInputs = (login, senha, inputLogin, inputSenha) => {
+                if (!login.includes('@') || !login.includes('.')) {
+                    alert("Dados inválidos")
+                    inputLogin.style.borderColor = "red"
+                    inputLogin.style.color = "red"
 
-                
-                if(!login.includes('@') || !login.includes('.')) { 
-                alert("Login Inválido!")
-                inputLogin.style.borderColor = "red"
-                inputLogin.style.color = "red"
-                
+                } if (senha == "" && senha == undefined) {
+
+                    inputSenha.style.borderColor = "red"
+                    inputSenha.style.color = "red"
+                } else {
+
+                    verificarLogin(login, senha)
+                }
             }
             
-            if(senha == "" && senha == undefined) {
-                
-                inputSenha.style.borderColor = "red"
-                inputSenha.style.color = "red"
-            }else {
-                
-                testeVerificarLogin(login, senha)
+            validarInputs(login, senha, inputLogin, inputSenha)
+
+        }
+        const verificarLogin = (login, senha) => {
+            let body = document.querySelector('form').parentNode
+            let statusMsg = document.querySelector('div[class="status"]')
+            
+            if (login == 'gabriel@gmail.com' && senha == '') {                // alert('Bem vindo, '+login+' você está logado'.toLowerCase());
+                status
+                let msg = 'Bem vindo, ' + login + ' você está logado'.toLowerCase();                //Crie uma div e mostre a mensagem no canto superior direito.
+                let divLogado = `<div class="status">${msg}</div>`
+                if(statusMsg != null) {
+                    alert(statusMsg)
+                    statusMsg = null
+                }else if(statusMsg == null) {
+                    console.log(statusMsg)
+                    body.innerHTML += divLogado++ 
+                }
+            } else {
+                if(statusMsg){
+                    statusMsg = ''
+                }else {
+                    let msg = 'Credenciais inválidas'.toUpperCase()
+                    let divInvalido = `<div class="status">${msg}</div>`
+
+                    body+=divInvalido
+                }
+
+
             }
         }
-        validarInputs(login, senha)
-            
-        
-    }
-        
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: linear-gradient(135deg, #999, #222);
+            background-repeat: no-repeat;
+            height: 92vh;
+        }
+
+        form {
+            margin: auto;
+            margin-top: 50px;
+            width: 60%;
+            background-color: #748DA6;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: #222 12px 3px;
+
+        }
+        
+        .input-form {
+            padding: 10px;
+        }
+        
+        .loginSuccess {
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+            padding: 10px;
+            border-bottom-left-radius: 15px;
+        }
+
+        
+        .loginFailed {
+            font-size: 1.3em;
+            font-weight:bold;
+            background-color: red;
+            text-align: center;
+            width: max-content;
+            padding: 40px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: #222 10px 6px;
+
+        }
+        .clienteArea{
+            text-align: justify;
+            color: #000;
+            background-image: linear-gradient(-45deg,#444, #fff);
+            border-radius: 30px;
+            display: none;
+            margin: 70px 50px;
+            height: 80vh;
+            box-shadow: #222 8px 8px;
+        }
+        .clienteArea div {
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clienteArea">
+        <div>
+            <H1>Área do Usuário</H1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat eius at molestias quo sunt, voluptates accusamus laboriosam doloribus natus dicta ad ex consequuntur ipsum laudantium libero quod excepturi nobis assumenda!</p>
+        </div>
+    </div>
+    <form name="form-login" class="center" id="form">
+        <div class="input-form">
+            <label>Login</label>
+            <input type="text" id="login" value="gabriel@gmail.com">
+        </div>
+        <div class="input-form">
+            <label>Senha</label>
+            <input type="password" id="senha" value="">
+        </div>
+        <div class="input-form">
+            <button type="button" onclick="realizarLogin()">Entrar</button>
+            <button type="reset" >Limpar</button>
+        </div>
+    </form>
+    <script type="text/javascript">
+
+        const realizarLogin = () => {
+
+            const inputLogin = document.getElementById('login')
+            const inputSenha = document.getElementById('senha')
+            const login = inputLogin.value
+            const senha = inputSenha.value
+
+            const validarInputs = (login, senha, inputLogin, inputSenha) => {
+                if (!login.includes('@') || !login.includes('.')) {
+                    alert("Dados inválidos")
+                    inputLogin.style.borderColor = "red"
+                    inputLogin.style.color = "red"
+
+                } if (senha == "" && senha == undefined) {
+
+                    inputSenha.style.borderColor = "red"
+                    inputSenha.style.color = "red"
+                } else {
+                    
+                    verificarLogin(login, senha)
+                }
+            }
+
+            validarInputs(login, senha, inputLogin, inputSenha)
+
+        }
+        const verificarLogin = (login, senha) => {
+            let body = document.querySelector('form').parentNode
+            let msg = ''
+            let statusDiv = document.querySelector('.status')
+            let statusLogin = (msg, status) => `<div class="${status}">${msg}</div>`
+            if (statusDiv) statusDiv.remove(this)
+            if (login == 'gabriel@gmail.com' && senha == '12345') {                // alert('Bem vindo, '+login+' você está logado'.toLowerCase());
+                msg = 'Bem vindo, ' + login + ' você está logado'.toLowerCase();                //Crie uma div e mostre a mensagem no canto superior direito.
+                body.innerHTML += statusLogin(msg, 'status loginSuccess')
+                document.querySelector('form').style.display = 'none'
+                document.querySelector('.clienteArea').style.display = 'block'
+            } else {
+                msg = 'Credenciais inválidas'.toUpperCase()
+                body.innerHTML += statusLogin(msg, 'status loginFailed')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

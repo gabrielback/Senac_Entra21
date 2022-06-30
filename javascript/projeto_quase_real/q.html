@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q</title>
+</head>
+
+<body>
+
+    <Script>
+
+        let objOriginal = { a: 2, b: 3, c: 5 }
+
+
+
+        const removerAtributo = (obj, chave) => {
+            delete obj[chave]
+            return obj
+        }
+
+        const adicionarAtributo = (obj, chave, valor = '') => {
+            obj[chave] = valor
+            return obj
+        }
+        adicionarAtributo(objOriginal, 'carro', 'Celta')
+        adicionarAtributo(objOriginal, 'carro', 'Corsa')
+        adicionarAtributo(objOriginal, 'carro2', 'Palio')
+        removerAtributo(objOriginal, 'a')
+        removerAtributo(objOriginal, 'b')
+        removerAtributo(objOriginal, 'c')
+        removerAtributo(objOriginal, )
+
+        const body = document.querySelector('body')
+        let htmlString = '';
+        for (let key in objOriginal) {
+            htmlString += '<span>' + key + '</span>'
+            htmlString += '<ul>'
+            htmlString += '<li>' + key + ' = ' + objOriginal[key] + '</li>'
+            htmlString += '</ul>'
+        }
+        body.innerHTML = htmlString
+
+
+    </Script>
+</body>
+
+</html>

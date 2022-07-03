@@ -15,6 +15,6 @@ Em um kanban, cada cartão representa uma atividade, e eles são posicionados em
 Documentação sobre [kanban](https://kanbanguides.org/wp-content/uploads/2021/10/Kanban-Guide-PT-BR.pdf)
 
 
-[Voltar para README.md](README.md)
+[Voltar para README.md](../README.md)
 
 

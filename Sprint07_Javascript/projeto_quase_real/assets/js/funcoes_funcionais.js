@@ -41,20 +41,6 @@ const vetorProduto =
         "descrição": "Loren ipsum! Not ipsum!",
         "em_estoque": true,
         "img": "assets/imgs/img003.jpg"
-    },
-    {
-        "produto": "Produto 07",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": false,
-        "img": "assets/imgs/img003.jpg"
-    },
-    {
-        "produto": "Produto 08",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": true,
-        "img": "assets/imgs/img003.jpg"
     }
 ];
 
@@ -66,12 +52,12 @@ const vetorProduto =
     sintaxe reduce array.reduce(previousValue, InitialValue)
 */
 
-const filtroMaiorQue10 = vetorProduto.filter(
-    (elemento) => {
-        return elemento.preco < 10;
-        
-    }
-)
+const converterDolar = (elemento) => {
+    const newElemento = {...elemento}
+    newElemento.preco = (newElemento.preco / 5.43).toFixed(2)
+    return newElemento
+}
+const produtos_em_dolar = vetorProduto.map(converterDolar)
 
 const emEstoque = (elemento) => {
         return elemento.em_estoque === true;
@@ -79,28 +65,11 @@ const emEstoque = (elemento) => {
 
 
 
-console.log('filtrar em estoque : ',emEstoque)
-
-
-
-const converterDolar = (elemento) => {
-    const newElemento = {...elemento}
-    newElemento.preco = newElemento.preco / 5.43
-    return newElemento
-}
-const produtos_em_dolar = vetorProduto.map(converterDolar)
-console.log('produtos em dolar: ',produtos_em_dolar)
-
-
 const retornaNomeProdutos = (elemento) => {
     return elemento.produto + "---" + elemento.preco
 }
 
 const nomeProdutos = vetorProduto.map(retornaNomeProdutos)
-
-console.log('nome produtos' + nomeProdutos)
-
-
 
  /*
  Reduce - fazer um calculo com todos os elementos retornando um único valor.
@@ -110,18 +79,14 @@ const somaPrecos = (totalizador, elemento) => {
     return totalizador + elemento.preco
 }
 
-
 const media_preco = vetorProduto.reduce(somaPrecos, 0)
 
-console.log('reduce :', media_preco)
-console.log('reduce: media', media_preco / vetorProduto.length)
+/*
+for(valor of vetor)
+for(index in vetor)
+*/
 
 const divListaProduto = document.getElementById('lista-produtos')
-
-/*
-    for(valor of vetor)
-    for(index in vetor)
-*/
 
 for(let elemento of vetorProduto){
 const divProduto = `
@@ -132,10 +97,7 @@ const divProduto = `
     </div>
     `;
     divListaProduto.innerHTML += divProduto;
-
 }
-
-
 
 const exibirProdutos = (vetor) => {
 
@@ -152,34 +114,70 @@ const exibirProdutos = (vetor) => {
         
     }
 }
-let estadoFiltroEstoque = false;
+
 
 const btnFiltraApenasEstoque = document.getElementById('filtro01')
-console.log(btnFiltraApenasEstoque)
+
+let estadoFiltroEstoque = false;
+
+
+const vetorFiltrado = vetorProduto.filter(emEstoque);
 btnFiltraApenasEstoque.onclick = () => {
-
+    
     estadoFiltroEstoque = !estadoFiltroEstoque
-    const vetorFiltrado = vetorProduto.filter(emEstoque);
-
+    
     if(estadoFiltroEstoque == true){
         exibirProdutos(vetorFiltrado)
+        btnFiltraApenasEstoque.classList.add('selected')
         btnFiltraApenasEstoque.innerText = `filtrando Em estoque`
                 
     }else{
         exibirProdutos(vetorProduto)
+        btnFiltraApenasEstoque.classList.remove('selected')
         btnFiltraApenasEstoque.innerText = 'Filtrar'
 
     }
 
 };
 
-let estadoValorEmDolar = false
-const divPrecoEmDolar = document.getElementById('div_preco_em_dolar')
+/*TODO*/ // REFATORAR
+
 const btnPrecoEmDolar = document.getElementById('preco_em_dolar')
 
+let estadoEmDolar = false
 
 btnPrecoEmDolar.onclick = () => {
-    vetorProduto.map()
-    converterDolar
-    
+    estadoEmDolar = !estadoEmDolar
+    const newArray = estadoFiltroEstoque ? vetorFiltrado : vetorProduto
+    if(estadoEmDolar && estadoFiltroEstoque){
+        
+        btnPrecoEmDolar.classList.add('selected')
+        exibirProdutos(newArray.map(converterDolar))
+        
+    }else if(estadoEmDolar && estadoFiltroEstoque == false){
+        
+        btnPrecoEmDolar.classList.add('selected')
+        exibirProdutos(newArray.map(converterDolar))
+        
+    }else {
+
+        btnPrecoEmDolar.classList.remove('selected')
+        exibirProdutos(newArray)
+        
+    }
+    console.log(estadoEmDolar, estadoFiltroEstoque)
+}
+
+
+const btnMedia = document.getElementById('btn_media')
+
+const divMedia = document.getElementById('div_media')
+
+btnMedia.onclick = () => {
+    if(!estadoFiltroEstoque){
+        
+        divMedia.innerHTML = vetorProduto.reduce(somaPrecos,0)
+    }else{
+        divMedia.innerHTML = vetorFiltrado.reduce(somaPrecos,0)
+    }
 }

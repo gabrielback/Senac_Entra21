@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/produtos.css">
 </head>
 <body>
     <header>
         <div>
             <span id="usuario-logado"></span>
         </div>
-        <button type="button" onclick="apagarLocalStorage()">Voltar</button>
-
     </header>
-    <script src="../assets/js/home.js"></script>
+    <div>
+        <button type="button" onclick="logout()">Voltar</button>
+    </div>
+        <div>
+            <button type="button" id="filtro01">Filtrar</button>
+            <button type="button" id="preco_em_dolar">Preço em Dólar</button>
+            <div id="div_preco_em_dolar"></div>
+        </div>
+        <div id="lista-produtos"></div>
+        <!-- 
+            mostrar a média de preços dos produtos em tela
+            Botão para mostrar preço em dólar
+         -->
+    <script type="text/javascript" src="../assets/js/home.js"></script>
+    <script type="text/javascript" src="../assets/js/funcoes_funcionais.js"></script>
 </body>
 </html>

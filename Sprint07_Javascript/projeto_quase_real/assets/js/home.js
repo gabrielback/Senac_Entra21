@@ -5,7 +5,11 @@ const sobrenomeUsuarioLogado = localStorage.getItem('sobrenomeUsuarioLogado');
 
 elemento_usuario_logado.innerText = `Olá ${nome_usuario_logado} ${sobrenomeUsuarioLogado}`;
 
-const apagarLocalStorage = () => {
+const logout = () => {
     localStorage.clear();
     window.location.assign("../index.html");
+}
+
+const loadContent = () => {
+    
 }

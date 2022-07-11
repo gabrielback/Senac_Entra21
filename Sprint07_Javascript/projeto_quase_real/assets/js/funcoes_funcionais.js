@@ -110,19 +110,16 @@ const exibirProdutos = (vetor) => {
         <h5>${elemento.preco}</h5>
         </div>
         `;
-        divListaProduto.innerHTML += divProduto;
-        
+        divListaProduto.innerHTML += divProduto;        
     }
 }
-
 
 const btnFiltraApenasEstoque = document.getElementById('filtro01')
 
 let estadoFiltroEstoque = false;
 
-
 const vetorFiltrado = vetorProduto.filter(emEstoque);
-btnFiltraApenasEstoque.onclick = () => {
+const filtrarProduto = () => {
     
     estadoFiltroEstoque = !estadoFiltroEstoque
     
@@ -130,15 +127,14 @@ btnFiltraApenasEstoque.onclick = () => {
         exibirProdutos(vetorFiltrado)
         btnFiltraApenasEstoque.classList.add('selected')
         btnFiltraApenasEstoque.innerText = `filtrando Em estoque`
-                
+        
     }else{
         exibirProdutos(vetorProduto)
         btnFiltraApenasEstoque.classList.remove('selected')
         btnFiltraApenasEstoque.innerText = 'Filtrar'
-
     }
-
 };
+btnFiltraApenasEstoque.onclick = filtrarProduto
 
 /*TODO*/ // REFATORAR
 
@@ -146,7 +142,8 @@ const btnPrecoEmDolar = document.getElementById('preco_em_dolar')
 
 let estadoEmDolar = false
 
-btnPrecoEmDolar.onclick = () => {
+
+const filtrarDolar = () => {
     estadoEmDolar = !estadoEmDolar
     const newArray = estadoFiltroEstoque ? vetorFiltrado : vetorProduto
     if(estadoEmDolar && estadoFiltroEstoque){
@@ -160,24 +157,50 @@ btnPrecoEmDolar.onclick = () => {
         exibirProdutos(newArray.map(converterDolar))
         
     }else {
-
+        
         btnPrecoEmDolar.classList.remove('selected')
         exibirProdutos(newArray)
         
     }
-    console.log(estadoEmDolar, estadoFiltroEstoque)
 }
+btnPrecoEmDolar.onclick = filtrarDolar
 
 
 const btnMedia = document.getElementById('btn_media')
 
 const divMedia = document.getElementById('div_media')
 
-btnMedia.onclick = () => {
-    if(!estadoFiltroEstoque){
-        
-        divMedia.innerHTML = vetorProduto.reduce(somaPrecos,0)
+let estadoMedia = false;
+const filtrarMedia = () => {
+    estadoMedia = !estadoMedia
+    if(estadoMedia){
+        btnMedia.classList.add('selected')
+        divMedia.style.display = 'block'
+        if(estadoEmDolar && estadoFiltroEstoque){
+            
+            divMedia.innerHTML = vetorFiltrado.reduce(somaPrecos, 0)
+        } else {
+            divMedia.innerHTML = vetorProduto.reduce(somaPrecos,0)
+        }
     }else{
-        divMedia.innerHTML = vetorFiltrado.reduce(somaPrecos,0)
+        divMedia.style.display = 'none'
+        divMedia.innerHTML = ''
+        btnMedia.classList.remove('selected')
     }
 }
+btnMedia.onclick = filtrarMedia
+window.addEventListener("keydown", (event) => {
+    let keyPressed = event.key.toUpperCase()
+    switch (keyPressed) {
+        case 'D':
+        filtrarDolar()
+        break;
+        case 'M':
+        filtrarMedia()   
+        break;
+        case 'F':
+        filtrarProduto()
+        break;
+
+    }
+} )

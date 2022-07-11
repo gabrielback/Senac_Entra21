@@ -16,15 +16,34 @@
     border-radius: 15px;
 }
 
-button {
-    background-color: #fff;
+button{
+    background-color: darkgray;
     border: solid 2px #333;
     border-radius: 5px;
     width: 100px;
     padding: 10px;
     margin: 3px;
+    font-weight: bold;
+    text-align: center;
 }
 
+button:not(.selected):hover {
+    background-color: #37f;
+    color: #fff;
+}
 .selected{
-    background-color: green;
+    background-color: green;    
+}
+
+div[id='div_media']{
+    background-color: darkgray;
+    border: solid 2px #333;
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    margin: 3px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    display: none;
 }

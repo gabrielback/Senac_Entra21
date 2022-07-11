@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,31 @@
     <title>Home</title>
     <link type="text/css" rel="stylesheet" href="../assets/css/produtos.css">
 </head>
+
 <body>
     <header>
         <div>
             <span id="usuario-logado"></span>
+            <button type="button" onclick="logout()">Logout</button>
         </div>
     </header>
     <div>
-        <button type="button" onclick="logout()">Voltar</button>
-    </div>
-        <div>
-            <button type="button" id="filtro01">Filtrar</button>
-            <button type="button" id="preco_em_dolar">Preço em Dólar</button>
-            <div id="div_preco_em_dolar"></div>
+        
+        
+        <div style="display:flex">
+            <button title="Use a tecla F" type="button" id="filtro01">Filtrar</button>
+            <button title="Use a tecla D" type="button" id="preco_em_dolar">Preço em Dólar</button>
+            <button title="Use a tecla M" type="button" id="btn_media">Média</button>
+            <div id="div_media"></div>
         </div>
+        
         <div id="lista-produtos"></div>
         <!-- 
             mostrar a média de preços dos produtos em tela
             Botão para mostrar preço em dólar
          -->
-    <script type="text/javascript" src="../assets/js/home.js"></script>
-    <script type="text/javascript" src="../assets/js/funcoes_funcionais.js"></script>
+        <script type="text/javascript" src="../assets/js/home.js"></script>
+        <script type="text/javascript" src="../assets/js/funcoes_funcionais.js"></script>
 </body>
+
 </html>

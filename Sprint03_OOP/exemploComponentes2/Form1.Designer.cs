@@ -44,6 +44,7 @@
             this.txbResultado = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCalcularIdade = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             // txbNome
             // 
-            this.txbNome.Location = new System.Drawing.Point(58, 85);
+            this.txbNome.Location = new System.Drawing.Point(63, 85);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(261, 23);
             this.txbNome.TabIndex = 1;
@@ -85,7 +86,7 @@
             // 
             // txbNumero
             // 
-            this.txbNumero.Location = new System.Drawing.Point(124, 114);
+            this.txbNumero.Location = new System.Drawing.Point(129, 114);
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(195, 23);
             this.txbNumero.TabIndex = 1;
@@ -123,7 +124,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(372, 186);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 74);
+            this.button2.Size = new System.Drawing.Size(144, 112);
             this.button2.TabIndex = 2;
             this.button2.Text = "&Sair";
             this.button2.UseVisualStyleBackColor = true;
@@ -132,9 +133,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(325, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(330, 74);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(171, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -153,9 +154,9 @@
             // 
             // txbResultado
             // 
-            this.txbResultado.Location = new System.Drawing.Point(77, 143);
+            this.txbResultado.Location = new System.Drawing.Point(80, 143);
             this.txbResultado.Name = "txbResultado";
-            this.txbResultado.Size = new System.Drawing.Size(242, 23);
+            this.txbResultado.Size = new System.Drawing.Size(244, 23);
             this.txbResultado.TabIndex = 1;
             this.txbResultado.Visible = false;
             // 
@@ -173,17 +174,27 @@
             // 
             this.btnCalcularIdade.Location = new System.Drawing.Point(12, 237);
             this.btnCalcularIdade.Name = "btnCalcularIdade";
-            this.btnCalcularIdade.Size = new System.Drawing.Size(174, 44);
+            this.btnCalcularIdade.Size = new System.Drawing.Size(174, 61);
             this.btnCalcularIdade.TabIndex = 5;
             this.btnCalcularIdade.Text = "Calcular Idade";
             this.btnCalcularIdade.UseVisualStyleBackColor = true;
             this.btnCalcularIdade.Click += new System.EventHandler(this.btnCalcularIdade_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(192, 232);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 61);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "btn";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 310);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnCalcularIdade);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.pictureBox1);
@@ -223,5 +234,6 @@
         private TextBox txbResultado;
         private Button btnLimpar;
         private Button btnCalcularIdade;
+        private Button button4;
     }
 }

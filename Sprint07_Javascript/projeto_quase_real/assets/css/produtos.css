@@ -27,6 +27,10 @@ button{
     text-align: center;
 }
 
+#filtros {
+    margin:10px 0px 15px 100px;
+}
+
 button:not(.selected):hover {
     background-color: #37f;
     color: #fff;

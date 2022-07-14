@@ -1,48 +1,5 @@
-const vetorProduto = 
-[
-    {
-        "produto": "Produto 01",
-        "preco": 3.65,
-        "descrição": "Loren ipsum!",
-        "em_estoque": true,
-        "img": "assets/imgs/img001.jpg"
-    },
-    {
-        "produto": "Produto 02",
-        "preco": 100.00,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": false,
-        "img": "assets/imgs/img002.jpg"
-    },
-    {
-        "produto": "Produto 03",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": true,
-        "img": "assets/imgs/img003.jpg"
-    },
-    {
-        "produto": "Produto 04",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": false,
-        "img": "assets/imgs/img003.jpg"
-    },
-    {
-        "produto": "Produto 05",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": false,
-        "img": "assets/imgs/img003.jpg"
-    },
-    {
-        "produto": "Produto 06",
-        "preco": 0.90,
-        "descrição": "Loren ipsum! Not ipsum!",
-        "em_estoque": true,
-        "img": "assets/imgs/img003.jpg"
-    }
-];
+let vetorProduto = []
+
 
 /*
     filter, map, reduce
@@ -52,12 +9,12 @@ const vetorProduto =
     sintaxe reduce array.reduce(previousValue, InitialValue)
 */
 
-const converterDolar = (elemento) => {
+const converterEmDolar = (elemento) => {
     const newElemento = {...elemento}
     newElemento.preco = (newElemento.preco / 5.43).toFixed(2)
     return newElemento
 }
-const produtos_em_dolar = vetorProduto.map(converterDolar)
+const produtos_em_dolar = vetorProduto.map(converterEmDolar)
 
 const emEstoque = (elemento) => {
         return elemento.em_estoque === true;
@@ -77,9 +34,10 @@ const nomeProdutos = vetorProduto.map(retornaNomeProdutos)
 
 const somaPrecos = (totalizador, elemento) => {
     return totalizador + elemento.preco
+
 }
 
-const media_preco = vetorProduto.reduce(somaPrecos, 0)
+// const media_preco = vetorProduto.reduce(somaPrecos, 0)
 
 /*
 for(valor of vetor)
@@ -116,14 +74,14 @@ const exibirProdutos = (vetor) => {
 
 const btnFiltraApenasEstoque = document.getElementById('filtro01')
 
-let estadoFiltroEstoque = false;
+let estadoFiltrado = false;
 
 const vetorFiltrado = vetorProduto.filter(emEstoque);
 const filtrarProduto = () => {
     
-    estadoFiltroEstoque = !estadoFiltroEstoque
+    estadoFiltrado = !estadoFiltrado
     
-    if(estadoFiltroEstoque == true){
+    if(estadoFiltrado == true){
         exibirProdutos(vetorFiltrado)
         btnFiltraApenasEstoque.classList.add('selected')
         btnFiltraApenasEstoque.innerText = `filtrando Em estoque`
@@ -145,16 +103,18 @@ let estadoEmDolar = false
 
 const filtrarDolar = () => {
     estadoEmDolar = !estadoEmDolar
-    const newArray = estadoFiltroEstoque ? vetorFiltrado : vetorProduto
-    if(estadoEmDolar && estadoFiltroEstoque){
+
+    let newArray = estadoFiltrado ? [...vetorFiltrado] : [...vetorProduto]
+
+    if(estadoEmDolar && estadoFiltrado){
         
         btnPrecoEmDolar.classList.add('selected')
-        exibirProdutos(newArray.map(converterDolar))
+        exibirProdutos(newArray.map(converterEmDolar))
         
-    }else if(estadoEmDolar && estadoFiltroEstoque == false){
+    }else if(estadoEmDolar && estadoFiltrado == false){
         
         btnPrecoEmDolar.classList.add('selected')
-        exibirProdutos(newArray.map(converterDolar))
+        exibirProdutos(newArray.map(converterEmDolar))
         
     }else {
         
@@ -170,25 +130,39 @@ const btnMedia = document.getElementById('btn_media')
 
 const divMedia = document.getElementById('div_media')
 
+
+//
 let estadoMedia = false;
+
+
+// TODO ; REFATORAR
+
 const filtrarMedia = () => {
     estadoMedia = !estadoMedia
+    
+    let newArray = estadoFiltrado ? [...vetorFiltrado] : [...vetorProduto]
+
+    newArray = estadoEmDolar ? newArray.map(converterEmDolar) : newArray
+    console.log(newArray.reduce(somaPrecos, 0))
+    // console.log(newArray.reduce(somaPrecos, 0))
     if(estadoMedia){
+
         btnMedia.classList.add('selected')
         divMedia.style.display = 'block'
-        if(estadoEmDolar && estadoFiltroEstoque){
-            
-            divMedia.innerHTML = vetorFiltrado.reduce(somaPrecos, 0)
-        } else {
-            divMedia.innerHTML = vetorProduto.reduce(somaPrecos,0)
-        }
+        divMedia.innerHTML = newArray.reduce(somaPrecos, 0)
+
     }else{
+
         divMedia.style.display = 'none'
         divMedia.innerHTML = ''
         btnMedia.classList.remove('selected')
+
     }
 }
 btnMedia.onclick = filtrarMedia
+
+
+//filtrar teclas e retornar elementos filtrados
 window.addEventListener("keydown", (event) => {
     let keyPressed = event.key.toUpperCase()
     switch (keyPressed) {
@@ -201,6 +175,5 @@ window.addEventListener("keydown", (event) => {
         case 'F':
         filtrarProduto()
         break;
-
     }
 } )

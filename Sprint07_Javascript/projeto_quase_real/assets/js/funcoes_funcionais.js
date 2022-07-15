@@ -1,5 +1,61 @@
-let vetorProduto = []
-
+let vetorProduto = [
+    {
+        "produto": "Produto 01",
+        "preco": 3.65,
+        "descrição": "Loren ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img001.jpg"
+    },
+    {
+        "produto": "Produto 02",
+        "preco": 100.00,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": false,
+        "img": "assets/imgs/img002.jpg"
+    },
+    {
+        "produto": "Produto 03",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    },
+    {
+        "produto": "Produto 04",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    },
+    {
+        "produto": "Produto 05",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    },
+    {
+        "produto": "Produto 06",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    },
+    {
+        "produto": "Produto 07",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    },
+    {
+        "produto": "Produto 08",
+        "preco": 0.90,
+        "descrição": "Loren ipsum! Not ipsum!",
+        "em_stock": true,
+        "img": "assets/imgs/img003.jpg"
+    }
+]
 
 /*
     filter, map, reduce
@@ -9,26 +65,44 @@ let vetorProduto = []
     sintaxe reduce array.reduce(previousValue, InitialValue)
 */
 
-const converterEmDolar = (elemento) => {
-    const newElemento = {...elemento}
-    newElemento.preco = (newElemento.preco / 5.43).toFixed(2)
-    return newElemento
+const converterEmDolar = (array) => {
+    const newArray = {...array}
+    newArray.preco = newArray.preco / 5.43
+    return newArray
 }
 const produtos_em_dolar = vetorProduto.map(converterEmDolar)
+
+////////////////////////////////////////////////////////////////////
+
+
+const apenasEmEstoque = (elemento) => {
+    console.log(elemento)
+    return elemento.produto
+}
+// console.log(vetorProduto.map(apenasEmEstoque))
+
+
+
+const convertToDolar = (elemento) => {
+    soma += elemento.preco = elemento.preco / 5.43
+    return soma
+}
+console.log(vetorProduto.map(convertToDolar))
+
+
+////////////////////////////////////////////////////////////////////
 
 const emEstoque = (elemento) => {
         return elemento.em_estoque === true;
     }
 
-
-
-const retornaNomeProdutos = (elemento) => {
+    const retornaNomeProdutos = (elemento) => {
     return elemento.produto + "---" + elemento.preco
 }
 
 const nomeProdutos = vetorProduto.map(retornaNomeProdutos)
 
- /*
+/*
  Reduce - fazer um calculo com todos os elementos retornando um único valor.
  */
 
@@ -72,7 +146,7 @@ const exibirProdutos = (vetor) => {
     }
 }
 
-const btnFiltraApenasEstoque = document.getElementById('filtro01')
+const filtrarEmEstoque = document.getElementById('filtro01')
 
 let estadoFiltrado = false;
 
@@ -83,16 +157,16 @@ const filtrarProduto = () => {
     
     if(estadoFiltrado == true){
         exibirProdutos(vetorFiltrado)
-        btnFiltraApenasEstoque.classList.add('selected')
-        btnFiltraApenasEstoque.innerText = `filtrando Em estoque`
+        filtrarEmEstoque.classList.add('selected')
+        filtrarEmEstoque.innerText = `filtrando Em estoque`
         
     }else{
         exibirProdutos(vetorProduto)
-        btnFiltraApenasEstoque.classList.remove('selected')
-        btnFiltraApenasEstoque.innerText = 'Filtrar'
+        filtrarEmEstoque.classList.remove('selected')
+        filtrarEmEstoque.innerText = 'Filtrar'
     }
 };
-btnFiltraApenasEstoque.onclick = filtrarProduto
+filtrarEmEstoque.onclick = filtrarProduto
 
 /*TODO*/ // REFATORAR
 
@@ -131,7 +205,6 @@ const btnMedia = document.getElementById('btn_media')
 const divMedia = document.getElementById('div_media')
 
 
-//
 let estadoMedia = false;
 
 
@@ -143,8 +216,6 @@ const filtrarMedia = () => {
     let newArray = estadoFiltrado ? [...vetorFiltrado] : [...vetorProduto]
 
     newArray = estadoEmDolar ? newArray.map(converterEmDolar) : newArray
-    console.log(newArray.reduce(somaPrecos, 0))
-    // console.log(newArray.reduce(somaPrecos, 0))
     if(estadoMedia){
 
         btnMedia.classList.add('selected')

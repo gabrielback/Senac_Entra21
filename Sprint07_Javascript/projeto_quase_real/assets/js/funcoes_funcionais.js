@@ -159,13 +159,13 @@ window.addEventListener("keydown", (event) => {
     let keyPressed = event.key.toUpperCase()
     switch (keyPressed) {
         case 'D':
-            filtrarDolar()
+            btnPrecoEmDolar.click()
             break;
         case 'M':
-            exibirMedia()
+            btnMedia.click()
             break;
         case 'F':
-            filtrarProduto()
+            btn_filtrar.click()
             break;
     }
 })

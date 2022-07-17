@@ -1,6 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(-45deg, #fff, #777);
+
+    /* background-image: linear-gradient(75deg #212 #929); */
+}
+.divHeader{
+    margin: 10px 5px 20px 100px;
+    font-size: 3em;
+    display: flex;
+    justify-content: space-between;
+}
 #lista-produtos{
     font-size: .8em;
-    margin-left: 100px;
+    margin: 0px 100px 0px 100px;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
@@ -15,7 +32,10 @@
     color: #fff;
     border-radius: 15px;
 }
-
+.produto p, h5 {
+    font-size: 1.3em;
+    margin: 20px;
+}
 button{
     background-color: darkgray;
     border: solid 2px #333;
@@ -40,11 +60,13 @@ button:not(.selected):hover {
 }
 
 div[id='div_media']{
+    /* color: green; */
+    /* text-shadow: #333 1px 1px; */
     background-color: darkgray;
     border: solid 2px #333;
     border-radius: 5px;
     width: 100px;
-    padding: 10px;
+    padding: 15px 10px;
     margin: 3px;
     font-weight: bold;
     text-align: center;

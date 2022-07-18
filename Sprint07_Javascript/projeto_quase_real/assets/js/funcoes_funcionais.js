@@ -7,7 +7,7 @@ const converterEmDolar = function (array) {
 
     const newArray =  { ...array }
 
-    newArray.preco = Number(parseFloat(newArray.preco / 5.43))
+    newArray.preco = Number(parseFloat(newArray.preco / dolar))
 
     return newArray
 

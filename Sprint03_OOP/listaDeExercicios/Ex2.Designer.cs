@@ -1,6 +1,6 @@
 ﻿namespace listaDeExercicios
 {
-    partial class Ex2_ParOuImpar
+    partial class Ex2
     {
         /// <summary>
         /// Required designer variable.

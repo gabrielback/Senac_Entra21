@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace listaDeExercicios
 {
-    public partial class Ex2_ParOuImpar : Form
+    public partial class Ex4 : Form
     {
-        public Ex2_ParOuImpar()
+        public Ex4()
         {
             InitializeComponent();
         }

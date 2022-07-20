@@ -1,6 +1,6 @@
 ﻿namespace listaDeExercicios
 {
-    partial class Ex3_Intervalo
+    partial class Ex3
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace listaDeExercicios
 {
-    partial class Ex1_MaiorOuMenor
+    partial class Ex1
     {
         /// <summary>
         ///  Required designer variable.
@@ -130,18 +130,19 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(52, 272);
+            this.lblResult.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResult.Location = new System.Drawing.Point(16, 276);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(38, 15);
+            this.lblResult.Size = new System.Drawing.Size(210, 37);
             this.lblResult.TabIndex = 6;
-            this.lblResult.Text = "Maior";
+            this.lblResult.Text = "Numero maior : ";
             this.lblResult.Visible = false;
             // 
-            // Ex1_MaiorOuMenor
+            // Ex1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 323);
+            this.ClientSize = new System.Drawing.Size(298, 374);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblMaior);
             this.Controls.Add(this.label5);
@@ -152,7 +153,7 @@
             this.Controls.Add(this.txbNumero1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Ex1_MaiorOuMenor";
+            this.Name = "Ex1";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

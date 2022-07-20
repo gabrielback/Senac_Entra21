@@ -34,6 +34,7 @@
             this.btnEx4 = new System.Windows.Forms.Button();
             this.btnEx5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.btnEx6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEx1
@@ -102,11 +103,23 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // btnEx6
+            // 
+            this.btnEx6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEx6.Location = new System.Drawing.Point(14, 151);
+            this.btnEx6.Name = "btnEx6";
+            this.btnEx6.Size = new System.Drawing.Size(143, 60);
+            this.btnEx6.TabIndex = 1;
+            this.btnEx6.Text = "Exercício 6";
+            this.btnEx6.UseVisualStyleBackColor = true;
+            this.btnEx6.Click += new System.EventHandler(this.btnEx6_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 219);
+            this.Controls.Add(this.btnEx6);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.btnEx5);
             this.Controls.Add(this.btnEx4);
@@ -127,5 +140,6 @@
         private Button btnEx4;
         private Button btnEx5;
         private Button button6;
+        private Button btnEx6;
     }
 }

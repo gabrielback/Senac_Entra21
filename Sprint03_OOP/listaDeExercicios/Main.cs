@@ -19,7 +19,7 @@ namespace listaDeExercicios
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Ex4 formExercicio4 = new Ex4();
+            Ex3 formExercicio4 = new Ex3();
             formExercicio4.Show();
         }
 
@@ -50,6 +50,12 @@ namespace listaDeExercicios
         {
             Ex5 formExercicio5 = new Ex5();
             formExercicio5.Show();
+        }
+
+        private void btnEx6_Click(object sender, EventArgs e)
+        {
+            Ex6 formExercicio6 = new Ex6();
+            formExercicio6.Show();
         }
     }
 }

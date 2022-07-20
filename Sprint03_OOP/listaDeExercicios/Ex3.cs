@@ -54,20 +54,7 @@ namespace listaDeExercicios
                 MessageBox.Show($"Houve um erro:\n" + error.Message);
             }
 
-            /*
-                5.FUP utilizando a estrutura for para imprimir a seguinte torre de caracteres: 
-            */
 
-            /*
-                         int quantidadeImpressoes = 50;
-                        string caracter = "7";
-                        string imprimir = "";
-                        for (int i = 0; i < quantidadeImpressoes; i++)
-                        {
-                            imprimir += caracter;
-                            Console.WriteLine(imprimir);
-                        }
-             */
 
 
         }

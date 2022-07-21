@@ -19,27 +19,17 @@ namespace listaDeExercicios
 
         private void btnExecutar_Click(object sender, EventArgs e)
         {
-            int acumulador = 0;
-            int fatorial = 5;
+            int fatorial = Convert.ToInt16(txbFatorial.Text);
+            int soma = fatorial;
 
-            for (int i = 0; i < fatorial; i++)
+            for (int i = 1; i < fatorial; i++)
             {
-                acumulador *= fatorial;
-                fatorial--;
-            MessageBox.Show(fatorial.ToString());
+                soma = soma * i;
 
             }
-            MessageBox.Show(acumulador.ToString());
-            /*
             
-            const fatorial = (n, p) => {
-                if (n > 1 && p == undefined)
-                {
-                    return n * fatorial(n - 1)
-                }
-                return n
-                }
-            */
+            lblResult.Text = $"Fatorial de {fatorial} é : {soma.ToString()}";
+            lblResult.Visible = true;
         }
     }
 }

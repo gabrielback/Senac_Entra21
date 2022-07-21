@@ -107,6 +107,7 @@
             this.txbCelsius.Name = "txbCelsius";
             this.txbCelsius.Size = new System.Drawing.Size(100, 43);
             this.txbCelsius.TabIndex = 2;
+            this.txbCelsius.TextChanged += new System.EventHandler(this.txbCelsius_TextChanged);
             // 
             // lblFahrenheit
             // 
@@ -133,6 +134,7 @@
             this.txbFahrenheit.Name = "txbFahrenheit";
             this.txbFahrenheit.Size = new System.Drawing.Size(100, 43);
             this.txbFahrenheit.TabIndex = 2;
+            this.txbFahrenheit.TextChanged += new System.EventHandler(this.txbFahrenheit_TextChanged);
             // 
             // Ex7
             // 

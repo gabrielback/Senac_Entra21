@@ -63,3 +63,6 @@ C:\Users\guest01\Documents\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debu
 C:\Users\guest01\Documents\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Ex6.resources
 C:\Users\guest01\Documents\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Ex7.resources
 C:\Users\guest01\Documents\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Properties.Resources.resources
+C:\Users\gabriel.back\Documents\github\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Ex6.resources
+C:\Users\gabriel.back\Documents\github\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Ex7.resources
+C:\Users\gabriel.back\Documents\github\Senac_Entra21\Sprint03_OOP\listaDeExercicios\obj\Debug\net6.0-windows\listaDeExercicios.Properties.Resources.resources

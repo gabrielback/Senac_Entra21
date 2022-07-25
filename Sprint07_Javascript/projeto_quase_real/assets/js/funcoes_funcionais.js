@@ -5,9 +5,9 @@ let vetorFiltradoEmDolar = [];
 
 const converterEmDolar = function (array) {
 
-    const newArray =  { ...array }
+    const newArray = { ...array }
 
-    newArray.preco = Number(parseFloat(newArray.preco / 5.43))
+    newArray.preco = Number(parseFloat(newArray.preco / dolar))
 
     return newArray
 
@@ -57,7 +57,7 @@ const exibirProdutos = (vetor) => {
         <p>${elemento.descrição}</p>           
         <h5>${moneySign}${elemento.preco.toFixed(2)}</h5>
         </div>`;
-        
+
         divListaProduto.innerHTML += divProduto;
     }
 }
@@ -68,7 +68,7 @@ const btn_filtrar = document.getElementById('filtro01')
 let estadoFiltrado = false;
 
 const filtrarProduto = () => {
-    
+
     if (estadoFiltrado == true) {
         estadoEmDolar ? exibirProdutos(vetorFiltradoEmDolar) : exibirProdutos(vetorFiltrado)
         btn_filtrar.classList.add('selected')
@@ -92,8 +92,6 @@ const btnPrecoEmDolar = document.getElementById('preco_em_dolar')
 let estadoEmDolar = false
 
 const filtrarDolar = () => {
-    
-    let newArray = estadoFiltrado ? [...vetorFiltrado] : [...vetorProduto]
 
     if (estadoEmDolar && estadoFiltrado) {
 
@@ -105,11 +103,11 @@ const filtrarDolar = () => {
 
         btnPrecoEmDolar.classList.add('selected')
         exibirProdutos(vetorProdutoEmDolar)
-    }else if (estadoEmDolar == false && estadoFiltrado == true) {
+    } else if (estadoEmDolar == false && estadoFiltrado == true) {
 
         btnPrecoEmDolar.classList.remove('selected')
         exibirProdutos(vetorFiltrado)
-    }else {
+    } else {
 
         btnPrecoEmDolar.classList.remove('selected')
         exibirProdutos(vetorProduto)

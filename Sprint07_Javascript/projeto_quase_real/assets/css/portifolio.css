@@ -1,0 +1,64 @@
+*{
+    margin:0
+}
+
+body{
+    background-color: #777;
+}
+
+
+#lista-repositorios {
+    margin: 0px 100px 0px 100px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.repositorio {
+    cursor: pointer;
+    width: 400px;
+    padding: 5px;       
+    color: #fff;
+    border-radius: 15px;
+    /* text-decoration: none; */
+}
+.repositorio > h1 {
+    font-size: 2em;
+}
+
+.repositorio > p {
+    color: green;
+}
+
+.repositorio.data {
+   
+}
+
+.repositorio p, h5 {
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+.repositorio.publico{
+    background-color: #333;
+    
+}
+
+.repositorio.privado{
+    background-color: brown;
+}
+
+p.date{
+    position: relative;
+    float: right;
+    right: 0px;
+}
+.linguagem {
+    /* position: relative; */
+    /* top: 1px; */
+    /* display: inline-block; */
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--color-primer-border-contrast);
+    border-radius: 50%;
+}

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\listaDeExercicios\\listaDeExercicios.csproj",
+      "projectUniqueName": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\exercicios\\listaDeExercicios.csproj",
       "projectName": "listaDeExercicios",
-      "projectPath": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\listaDeExercicios\\listaDeExercicios.csproj",
+      "projectPath": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\exercicios\\listaDeExercicios.csproj",
       "packagesPath": "C:\\Users\\gabriel.back\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\listaDeExercicios\\obj\\",
+      "outputPath": "C:\\Users\\gabriel.back\\Documents\\github\\Senac_Entra21\\Sprint03_OOP\\exercicios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabriel.back\\AppData\\Roaming\\NuGet\\NuGet.Config",

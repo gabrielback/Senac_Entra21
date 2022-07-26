@@ -14,13 +14,13 @@ body{
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .repositorio {
     cursor: pointer;
     width: 400px;
     padding: 5px;       
     color: #fff;
     border-radius: 15px;
-    /* text-decoration: none; */
 }
 .repositorio > h1 {
     font-size: 2em;

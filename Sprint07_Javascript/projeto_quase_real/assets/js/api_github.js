@@ -1,4 +1,4 @@
-const user = "gabrielback"
+const user = "vinirteixeira"
 const repo = document.getElementById('lista-repositorios');
 const img_Foto = document.getElementById('foto');
 const bio = document.getElementById('bio')
@@ -34,9 +34,50 @@ const getGithubAPI = (user) => {
         })
 }
 
-getGithubAPI('gabrielback')
+getGithubAPI('github')
+// getGithubAPI('gabrielback')
 // renderizaDiretorios()
 
+
+
+$.ajax({ 
+    type: 'GET', 
+    url: 'http://api.github.com/users/gabrielback/repos', 
+    crossDomain: true, 
+    dataType: 'json', 
+    success: function() { 
+      console.log(arguments[0]); 
+      console.log("ajax function",arguments); 
+
+    }, 
+    error: function() { 
+      console.log("ajax function",arguments); 
+    } 
+  });
+ 
+
+
+// $.ajax({
+//     type: "get",
+//     xhrFields: { withCredentials:true },
+//     url: "http://apiendpoint.com",
+//     success: function(data)
+//     {
+//      console.log(data);
+//     }
+// })
+
+
+// $({
+//     url: 'http://api.github.com/users/gabrielback/repos',
+//     beforeSend: function(xhr) {
+//         xhr.setRequestHeader("", "gabrielback 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")
+//         console.log(xhr)
+//     }, success: function(data){
+//         console.log(data)
+//         //process the JSON data etc
+//     }
+// })
 // exibir_load(true)
 
 function renderiza_foto(foto) {

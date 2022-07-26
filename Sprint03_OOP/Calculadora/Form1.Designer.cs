@@ -279,6 +279,7 @@
             this.Name = "FormCalculadora";
             this.Text = "Calculadora";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCalculadora_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

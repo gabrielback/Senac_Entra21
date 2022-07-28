@@ -51,57 +51,48 @@ namespace listaDeExercicios
             }
 
         }
-
-        private void txbKelvin_TextChanged(object sender, EventArgs e)
+        public void setInputVisibility()
         {
-            if (txbKelvin.Text.Length > 0)
+            if (txbCelsius.Text.Length > 0)
+            {
+                txbKelvin.ReadOnly = true;
+                txbFahrenheit.ReadOnly = true;
+
+            }
+            else if (txbFahrenheit.Text.Length > 0)
+            {
+                txbKelvin.ReadOnly = true;
+                txbCelsius.ReadOnly = true;
+
+            }
+            else if (txbKelvin.Text.Length > 0)
             {
                 txbCelsius.ReadOnly = true;
                 txbFahrenheit.ReadOnly = true;
-                
+
             }
             else
             {
+                txbKelvin.ReadOnly = false;
                 txbCelsius.ReadOnly = false;
                 txbFahrenheit.ReadOnly = false;
 
             }
         }
 
+        private void txbKelvin_TextChanged(object sender, EventArgs e)
+        {
+            setInputVisibility();
+        }
+
         private void txbCelsius_TextChanged(object sender, EventArgs e)
         {
-            bool v = txbCelsius.Text.Length >= 0 ? txbKelvin.ReadOnly = true: txbKelvin.ReadOnly = false;
-            MessageBox.Show(v.ToString());
-            if (txbCelsius.Text.Length > 0)
-            {
-
-        //    txbKelvin.ReadOnly = true;
-         //   txbFahrenheit.ReadOnly = true;
-
-            }
-            else
-            {
-         //       txbKelvin.ReadOnly = false;
-         //       txbFahrenheit.ReadOnly = false;
-            }
-
+            setInputVisibility();
         }
 
         private void txbFahrenheit_TextChanged(object sender, EventArgs e)
         {
-            if (txbFahrenheit.Text.Length > 0)
-            {   
-                
-                txbCelsius.ReadOnly = true;
-                txbKelvin.ReadOnly = true;
-
-            }
-            else
-            {
-                txbCelsius.ReadOnly = false;
-                txbKelvin.ReadOnly = false;
-
-            }
+            setInputVisibility();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

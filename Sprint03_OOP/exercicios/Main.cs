@@ -57,5 +57,11 @@ namespace listaDeExercicios
             Ex6 formExercicio6 = new Ex6();
             formExercicio6.Show();
         }
+
+        private void btnEx7_Click(object sender, EventArgs e)
+        {
+            Ex7 formExercicio7 = new Ex7();
+            formExercicio7.Show();
+        }
     }
 }

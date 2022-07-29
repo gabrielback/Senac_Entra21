@@ -17,6 +17,8 @@ namespace listaDeExercicios
             InitializeComponent();
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             int celsius, kelvin, fahrenheit;
@@ -56,13 +58,16 @@ namespace listaDeExercicios
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong!!.\n\n{ex.Message.ToUpper()}\n\nTry again.");
+                MessageBox.Show($"Something went wrong!!\n\n{ex.Message.ToUpper()}\n\nTry again.");
                 btnLimpar.PerformClick();
             }
            
 
 
         }
+
+
+        
         public void setInputVisibility()
         {
             if (txbCelsius.Text.Length > 0)

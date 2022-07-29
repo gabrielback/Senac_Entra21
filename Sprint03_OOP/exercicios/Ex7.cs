@@ -20,35 +20,47 @@ namespace listaDeExercicios
         private void button1_Click(object sender, EventArgs e)
         {
             int celsius, kelvin, fahrenheit;
-          
-            if(txbCelsius.Text.Length > 0)
+            try
             {
-                celsius = Convert.ToInt32(txbCelsius.Text);
-                int celsiusToFahrenheit = 9 * celsius / 5 + 32;
-                int celsiusToKelvin = celsius + 273;
+                if (txbCelsius.Text.Length > 0)
+                {
+                    celsius = Convert.ToInt32(txbCelsius.Text);
+                    double celsiusToFahrenheit = 9 * celsius / 5 + 32;
+                    double celsiusToKelvin = celsius + 273;
 
-                txbFahrenheit.Text = celsiusToFahrenheit.ToString();
-                txbKelvin.Text = celsiusToKelvin.ToString();
-            }
-            else if (txbKelvin.Text.Length > 0)
-            {
-                kelvin = Convert.ToInt32(txbKelvin.Text);
-                int kelvinToCelsius = kelvin - 273;
-                int kelvinToFahrenheit = 9 * (kelvin - 273) / 5 + 32;
+                    txbFahrenheit.Text = celsiusToFahrenheit.ToString();
+                    txbKelvin.Text = celsiusToKelvin.ToString();
+                    txbCelsius.ReadOnly = true;
+                }
+                else if (txbKelvin.Text.Length > 0)
+                {
+                    kelvin = Convert.ToInt32(txbKelvin.Text);
+                    double kelvinToCelsius = kelvin - 273;
+                    double kelvinToFahrenheit = 9 * (kelvin - 273) / 5 + 32;
+
+                    txbCelsius.Text = kelvinToCelsius.ToString();
+                    txbFahrenheit.Text = kelvinToFahrenheit.ToString();
+                }
+                else if (txbFahrenheit.Text.Length > 0)
+                {
+
+                    fahrenheit = Convert.ToInt32(txbFahrenheit.Text);
+                    double fahrenheitToKelvin = 5 * (fahrenheit - 32) / 9 + 273;
+                    double fahrenheitToCelsius = 5 * (fahrenheit - 32) / 9;
+
+                    txbCelsius.Text = fahrenheitToCelsius.ToString();
+                    txbKelvin.Text = fahrenheitToKelvin.ToString();
+                }
+                btnConverter.Enabled = false;
                 
-                txbCelsius.Text = kelvinToCelsius.ToString();
-                txbFahrenheit.Text = kelvinToFahrenheit.ToString();
             }
-            else if (txbFahrenheit.Text.Length > 0)
+            catch (Exception ex)
             {
-
-                fahrenheit = Convert.ToInt32(txbFahrenheit.Text);
-                int fahrenheitToKelvin = 5 * (fahrenheit - 32) / 9 + 273;
-                int fahrenheitToCelsius = 5 * (fahrenheit - 32) / 9;
-
-                txbFahrenheit.Text = fahrenheitToKelvin.ToString();
-                txbKelvin.Text = fahrenheitToCelsius.ToString();
+                MessageBox.Show($"Something went wrong!!.\n\n{ex.Message.ToUpper()}\n\nTry again.");
+                btnLimpar.PerformClick();
             }
+           
+
 
         }
         public void setInputVisibility()
@@ -57,6 +69,7 @@ namespace listaDeExercicios
             {
                 txbKelvin.ReadOnly = true;
                 txbFahrenheit.ReadOnly = true;
+
 
             }
             else if (txbFahrenheit.Text.Length > 0)
@@ -100,6 +113,7 @@ namespace listaDeExercicios
             txbCelsius.Text = "";
             txbKelvin.Text = "";
             txbFahrenheit.Text = "";
+            btnConverter.Enabled = true;
         }
     }
 }

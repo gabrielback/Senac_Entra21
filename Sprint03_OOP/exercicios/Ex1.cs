@@ -14,15 +14,10 @@ namespace listaDeExercicios
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-            /*
-                EX1
-            */
-            
             try
             {
                 int[] numbers = new int[3];
+
                 numbers[0] = Convert.ToInt16(txbNumero1.Text);
                 numbers[1] = Convert.ToInt16(txbNumero2.Text);
                 numbers[2] = Convert.ToInt16(txbNumero3.Text);
@@ -33,11 +28,13 @@ namespace listaDeExercicios
                 lblResult.Text = $"Número maior: {maxValue}\nNúmero menor: {minValue}";
                 lblResult.Visible = true;
             }
-            catch(Exception error)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Houve um erro:\n" + error.Message);
-
+                MessageBox.Show($"Something went wrong!!.\n\n{ex.Message.ToUpper()}\n\nTry again.");
+                txbNumero1.Text = null; txbNumero2.Text = null; txbNumero3.Text = null;
             }
+
+
         }
     }
 }

@@ -20,40 +20,32 @@ namespace listaDeExercicios
         {
 
 
+
+
+
+        }
+
+        private void btnChecar_Click(object sender, EventArgs e)
+        {
+
             /*
-EX2
-
-Faça um Programa que peça um valor e mostre na tela se o valor é positivo 
-ou negativo e verifique se o número é par ou ímpar.
-
-*/
-
-            int number = -0;
-
-
-            if (number >= 0)
+            EX2
+            Faça um Programa que peça um valor e mostre na tela se o valor é positivo 
+            ou negativo e verifique se o número é par ou ímpar.
+            */
+            try
             {
-                Console.WriteLine("Positivo");
-            }
-            else
-            {
-                Console.WriteLine("Negativo");
+            int number = Convert.ToInt16(txbNumero1.Text);
 
-            }
-            if (number % 2 == 0)
-            {
-                Console.WriteLine("Par");
-            }
-            else
-            {
-                Console.WriteLine("impar");
-
-            }
-            MessageBox.Show("teste");
             string positivoOuNegativo = (number >= 0) ? "positivo" : "negativo";
             string parOuImpar = (number % 2 == 0) ? "Par" : "Impar";
-            Console.WriteLine($"O número é {parOuImpar} e {positivoOuNegativo}");
-
+            MessageBox.Show($"O número é {parOuImpar} e {positivoOuNegativo}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong!!\n\n{ex.Message.ToUpper()}\n\nTry again.");
+                txbNumero1.Text = "";
+            }
         }
     }
 }

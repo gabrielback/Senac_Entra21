@@ -52,6 +52,7 @@
             this.btnChecar.TabIndex = 9;
             this.btnChecar.Text = "Checar";
             this.btnChecar.UseVisualStyleBackColor = true;
+            this.btnChecar.Click += new System.EventHandler(this.btnChecar_Click);
             // 
             // txbNumero1
             // 
@@ -69,7 +70,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Numero1";
             // 
-            // Ex2_ParOuImpar
+            // Ex2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +79,7 @@
             this.Controls.Add(this.btnChecar);
             this.Controls.Add(this.txbNumero1);
             this.Controls.Add(this.label1);
-            this.Name = "Ex2_ParOuImpar";
+            this.Name = "Ex2";
             this.Text = "Ex1_ParOuImpar";
             this.ResumeLayout(false);
             this.PerformLayout();

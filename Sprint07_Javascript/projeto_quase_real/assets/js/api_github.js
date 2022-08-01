@@ -33,7 +33,7 @@ const getUserRepositories = (user) => {
                 .then(response => response.json())
                 .then(data => {
                     let dashboard = document.getElementById('dashboard')
-                    dashboard.insertAdjacentHTML("afterbegin", `<h1>${data[0].title}</h1><div><iframe id="pbi"></iframe><div>`)
+                    dashboard.insertAdjacentHTML("afterbegin", `<h1>${data[0].title}</h1><div><iframe id="pbi" width="100%" height="100%" src="" frameborder="0" allowFullScreen="true"></iframe><div>`)
                     let powerBI = document.getElementById('pbi')
                     powerBI.src = data[0].url
                 })

@@ -33,11 +33,22 @@ namespace listaDeExercicios
                         int quantidadeImpressoes = Convert.ToInt32(txbQuantidade.Text);
                         string caracter = txbCaracteres.Text;
                         string imprimir = "";
+                int cont = 0;
 
                         for (int i = 0; i < quantidadeImpressoes; i++)
+                        {   
+                    if(cont < 5)
+                    {
+                            imprimir += caracter;
+                            ltbPrint.Items.Add(imprimir);
+                    }
+                    else if (cont < 5)
                         {
                             imprimir += caracter;
                             ltbPrint.Items.Add(imprimir);
+                        }
+
+                    cont++;
                         }
             }
             catch (Exception error)

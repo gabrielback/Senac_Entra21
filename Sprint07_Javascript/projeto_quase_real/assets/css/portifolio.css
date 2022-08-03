@@ -81,7 +81,7 @@ h1 {
     font-size: 1.5em;
 }
 
-.repositorio.publico > p {
+.repositorio.public > p {
     color: green;
 }
 
@@ -93,7 +93,7 @@ h1 {
 
 
 
-.repositorio.privado{
+.repositorio.private{
     background-color: brown;
 }
 

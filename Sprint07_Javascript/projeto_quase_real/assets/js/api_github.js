@@ -42,7 +42,6 @@ const renderizarRepositorios = repositories => {
     let listaDeRepositorios = conteudoGithub.firstChild.nextSibling
     repositories.map(repository => {
         let privacy = repository.private ? "private" : "public"
-        console.log("repository",repository)
         let updatedAt = Intl.DateTimeFormat('pt-br').format(new Date(repository.updated_at))
         
         listaDeRepositorios.innerHTML += 
@@ -62,7 +61,11 @@ const renderizarRepositorios = repositories => {
 
 const renderizarDashboard = data => {
     let dashboard = document.getElementById('dashboard')
-    dashboard.insertAdjacentHTML("afterbegin", `<h1>${data[0].title}</h1><div><iframe id="pbi" width="100%" height="100%" src="" frameborder="0" allowFullScreen="true"></iframe><div>`)
+    dashboard.insertAdjacentHTML("afterbegin", `
+    <h1>${data[0].title}</h1>
+        <div>
+            <iframe id="pbi" width="100%" height="100%" src="" frameborder="0" allowFullScreen="true"></iframe>
+        <div>`)
     let powerBI = document.getElementById('pbi')
     powerBI.src = data[0].url
 }
@@ -84,51 +87,4 @@ const renderizarUsuario = data => {
             <h1>${data.name}</h1>
             `
         }
-            
-// fetch(`https://api.github.com/users/${user}`)
-// .then(response => response.json())
-// .then(user => {
-    // renderiza_foto(user.avatar_url)
-    // console.log(user)
-    //     fetch(user.repos_url)
-    //     .then(response => response.json())
-    //     .then(repositorios => {
-        //         renderizarRepositorios(repositorios)
-        
-        // })
-        // }).catch( error => { // para status de erro
-        //     console.error('algo deu errado na requisição', error);
-        
-        // }).finally(() => {
-            //     // exibir_load(false)
-            //     console.warn('Sempre cai aqui')
-            // })
-            
-            
-            
-            
-// Não implementado
-
-// const appendImageLanguage = imageLink => {
-    //     let img = ""
-    //     imageLink.forEach(data => {
-        //         data = data.toLocaleLowerCase()
-        //         img = `<img src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/${data}/${data}_48x48.png"></img>`
-        //     })
-        //     console.log(img)
-        // }
-        
-        
-        
-        // const getLanguageOnGithub = repository => {
-            //     fetch(repository.languages_url)
-            //     .then(response => response.json())
-            //     .then(data => Object.keys(data))
-            // }
-            
-            // exibir_load(true)
-            
-//
-// const loadGithub = e => console.log(e);
-// loadGithub()
-// // window.location.assign(`https://github.com/${githubUserName}/aluraJava`)
+       

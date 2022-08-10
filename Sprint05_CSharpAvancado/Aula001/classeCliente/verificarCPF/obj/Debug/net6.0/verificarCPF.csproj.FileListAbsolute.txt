@@ -1,0 +1,15 @@
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\bin\Debug\net6.0\verificarCPF.exe
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\bin\Debug\net6.0\verificarCPF.deps.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\bin\Debug\net6.0\verificarCPF.runtimeconfig.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\bin\Debug\net6.0\verificarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\bin\Debug\net6.0\verificarCPF.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.csproj.AssemblyReference.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.AssemblyInfoInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.AssemblyInfo.cs
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.csproj.CoreCompileInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\refint\verificarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\verificarCPF.genruntimeconfig.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\verificarCPF\obj\Debug\net6.0\ref\verificarCPF.dll

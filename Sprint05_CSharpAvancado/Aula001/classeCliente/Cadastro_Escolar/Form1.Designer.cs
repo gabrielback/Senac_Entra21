@@ -182,7 +182,11 @@
             this.txtMedia.Location = new System.Drawing.Point(58, 181);
             this.txtMedia.Name = "txtMedia";
             this.txtMedia.Size = new System.Drawing.Size(160, 23);
+<<<<<<< HEAD
             this.txtMedia.TabIndex = 4;
+=======
+            this.txtMedia.TabIndex = 5;
+>>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
             // 
             // lblMedia
             // 

@@ -1,0 +1,17 @@
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.csproj.AssemblyReference.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.Form1.resources
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.csproj.GenerateResource.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.AssemblyInfoInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.AssemblyInfo.cs
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.csproj.CoreCompileInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\bin\Debug\net6.0-windows\MediaAluno.exe
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\bin\Debug\net6.0-windows\MediaAluno.deps.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\bin\Debug\net6.0-windows\MediaAluno.runtimeconfig.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\bin\Debug\net6.0-windows\MediaAluno.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\bin\Debug\net6.0-windows\MediaAluno.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\refint\MediaAluno.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\MediaAluno.genruntimeconfig.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\MediaAluno\obj\Debug\net6.0-windows\ref\MediaAluno.dll

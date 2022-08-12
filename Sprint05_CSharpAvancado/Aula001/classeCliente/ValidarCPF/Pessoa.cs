@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
 namespace Cadastro_Escolar
 {
     internal class Pessoa
@@ -31,5 +32,19 @@ namespace Cadastro_Escolar
         }
 
 
+=======
+namespace ValidarCPF
+{
+    internal class Pessoa
+    {
+        private string matricula;
+        private string nome;
+        private string cpf;
+
+       public void ValidarCPF()
+        {
+
+        }
+>>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
     }
 }

@@ -21,18 +21,32 @@ namespace Cadastro_Escolar
 
                 if (radioButton1.Checked)
                 {
+<<<<<<< HEAD
                     professor.Matricula = (Convert.ToInt32(txtMatricula.Text));
                     professor.Nome = (txtNome.Text);
                     professor.Salario = Convert.ToInt32(txtSalario.Text);
 
                     lblDadosCadastrados.Text += professor.ToString();
+=======
+                professor.setMatricula(Convert.ToInt32(txtMatricula.Text));
+                professor.setNome(txtNome.Text);
+                professor.Salario = Convert.ToInt32(txtSalario.Text);
+
+                lblDadosCadastrados.Text += professor.ToString();
+>>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
 
                 }
                 else if (radioButton2.Checked)
                 {
+<<<<<<< HEAD
                     aluno.Matricula = (Convert.ToInt32(txtMatricula.Text));
                     aluno.Nome = (txtNome.Text);
                     aluno.Media = Convert.ToInt32(txtMedia.Text);
+=======
+                    aluno.setMatricula(Convert.ToInt32(txtMatricula.Text));
+                    aluno.setNome(txtNome.Text);
+                    aluno.Media1 = Convert.ToInt32(txtSalario.Text);
+>>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
 
                     lblDadosCadastrados.Text += aluno.ToString();
 
@@ -45,7 +59,11 @@ namespace Cadastro_Escolar
             }
             catch(Exception ex)
             {
+<<<<<<< HEAD
                 MessageBox.Show($"Error. {ex}");
+=======
+                MessageBox.Show($"Error. {ex.Message.ToUpper()}");
+>>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
             }
 
 

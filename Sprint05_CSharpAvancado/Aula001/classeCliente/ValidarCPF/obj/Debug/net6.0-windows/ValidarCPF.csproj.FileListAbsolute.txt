@@ -1,0 +1,17 @@
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\bin\Debug\net6.0-windows\ValidarCPF.exe
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\bin\Debug\net6.0-windows\ValidarCPF.deps.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\bin\Debug\net6.0-windows\ValidarCPF.runtimeconfig.json
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\bin\Debug\net6.0-windows\ValidarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\bin\Debug\net6.0-windows\ValidarCPF.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.csproj.AssemblyReference.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.Form1.resources
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.csproj.GenerateResource.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.AssemblyInfoInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.AssemblyInfo.cs
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.csproj.CoreCompileInputs.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\refint\ValidarCPF.dll
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.pdb
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ValidarCPF.genruntimeconfig.cache
+C:\Users\guest01\Documents\Senac_Entra21\Sprint05_CSharpAvancado\Aula001\classeCliente\ValidarCPF\obj\Debug\net6.0-windows\ref\ValidarCPF.dll

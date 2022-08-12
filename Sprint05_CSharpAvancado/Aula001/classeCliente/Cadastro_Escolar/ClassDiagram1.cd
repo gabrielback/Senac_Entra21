@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cadastro_Escolar.Aluno">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAQ=</HashCode>
+      <FileName>Aluno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cadastro_Escolar.Pessoa">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAEAAAAAAAAAAAAAAAAQAAABAAAAEAAAEAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cadastro_Escolar.Professor">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Professor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cadastro_Escolar.Funcionario">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAQAAAAA=</HashCode>
+      <FileName>Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

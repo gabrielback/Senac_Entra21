@@ -7,6 +7,7 @@ namespace Classe_Cliente
             InitializeComponent();
         }
         Cliente novoCliente = new Cliente();
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try 
@@ -17,24 +18,32 @@ namespace Classe_Cliente
                 novoCliente.setLimiteCredito(double.Parse(txbLimiteCredito.Text)); 
                 novoCliente.setDataNasc(dateTimePicker1.Value); 
                 novoCliente.setNumeroCartao(double.Parse(txbNroCartao.Text)); 
-                
 //                MessageBox.Show("Cliente Cadastrado com Sucesso", "Aviso");
 
                 novoCliente.verificaLimite();
+
                 lblStatusCadastro.Text = "Ok";
                 lblStatusLimite.Text = novoCliente.getStatus();
-                
-//                MessageBox.Show("Sua situação atual é: " + novoCliente.getStatus(), "Aviso"); 
-                
-                lblNome.Text = (novoCliente.getNome()); 
-                lblEndereco.Text = (novoCliente.getEndereco()); 
-                lblContato.Text = (novoCliente.getContato()); 
-                lblLimiteCredito.Text = (novoCliente.getLimiteCredito()).ToString(); 
-                lblDt_Nasc.Text = (novoCliente.getDataNasc()).ToString(); 
+
+                //                MessageBox.Show("Sua situação atual é: " + novoCliente.getStatus(), "Aviso"); 
+
+                lblNome.Text = (novoCliente.getNome());
+                lblEndereco.Text = (novoCliente.getEndereco());
+                lblContato.Text = (novoCliente.getContato());
+                lblLimiteCredito.Text = (novoCliente.getLimiteCredito()).ToString();
+                lblDt_Nasc.Text = (novoCliente.getDataNasc()).ToString();
                 lblNroCartao.Text = (novoCliente.getNumeroCartao()).ToString();
+                gpbStatus.Visible = true;
 
+                if(lblStatusLimite.Text == "Liberado")
+                {
+                    lblStatusLimite.BackColor = Color.Green;
+                }
+                else
+                {
+                    lblStatusLimite.BackColor = Color.Red;
+                }
 
-                
                 DialogResult result = MessageBox.Show("Confirmar cadastro do cliente?","Confirmar Clientes", MessageBoxButtons.YesNo);
                 if(result == DialogResult.Yes)
                 {
@@ -51,6 +60,16 @@ namespace Classe_Cliente
             { 
                 MessageBox.Show("Erro de Conversão", "Falha no Cadastro"); 
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

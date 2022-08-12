@@ -42,17 +42,19 @@
             this.txbEndereco = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.gpbStatus = new System.Windows.Forms.GroupBox();
+            this.lblLimite = new System.Windows.Forms.Label();
+            this.lblCadastro = new System.Windows.Forms.Label();
+            this.lblStatusLimite = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.lblStatusCadastro = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
             this.lblDt_Nasc = new System.Windows.Forms.Label();
             this.lblLimiteCredito = new System.Windows.Forms.Label();
             this.lblNroCartao = new System.Windows.Forms.Label();
-            this.lblCadastro = new System.Windows.Forms.Label();
-            this.lblLimite = new System.Windows.Forms.Label();
-            this.lblStatusCadastro = new System.Windows.Forms.Label();
-            this.lblStatusLimite = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.gpbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,10 +73,11 @@
             this.groupBox1.Controls.Add(this.txbNome);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 263);
+            this.groupBox1.Size = new System.Drawing.Size(343, 263);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar Cliente";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dateTimePicker1
             // 
@@ -141,40 +144,40 @@
             // 
             this.txbNroCartao.Location = new System.Drawing.Point(124, 183);
             this.txbNroCartao.Name = "txbNroCartao";
-            this.txbNroCartao.Size = new System.Drawing.Size(216, 23);
+            this.txbNroCartao.Size = new System.Drawing.Size(200, 23);
             this.txbNroCartao.TabIndex = 6;
             // 
             // txbLimiteCredito
             // 
             this.txbLimiteCredito.Location = new System.Drawing.Point(124, 154);
             this.txbLimiteCredito.Name = "txbLimiteCredito";
-            this.txbLimiteCredito.Size = new System.Drawing.Size(216, 23);
+            this.txbLimiteCredito.Size = new System.Drawing.Size(200, 23);
             this.txbLimiteCredito.TabIndex = 5;
             // 
             // txbContato
             // 
             this.txbContato.Location = new System.Drawing.Point(82, 96);
             this.txbContato.Name = "txbContato";
-            this.txbContato.Size = new System.Drawing.Size(172, 23);
+            this.txbContato.Size = new System.Drawing.Size(242, 23);
             this.txbContato.TabIndex = 3;
             // 
             // txbEndereco
             // 
             this.txbEndereco.Location = new System.Drawing.Point(82, 67);
             this.txbEndereco.Name = "txbEndereco";
-            this.txbEndereco.Size = new System.Drawing.Size(172, 23);
+            this.txbEndereco.Size = new System.Drawing.Size(242, 23);
             this.txbEndereco.TabIndex = 2;
             // 
             // txbNome
             // 
             this.txbNome.Location = new System.Drawing.Point(82, 38);
             this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(172, 23);
+            this.txbNome.Size = new System.Drawing.Size(242, 23);
             this.txbNome.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 446);
+            this.button1.Location = new System.Drawing.Point(217, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 39);
             this.button1.TabIndex = 7;
@@ -182,19 +185,74 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // gpbStatus
+            // 
+            this.gpbStatus.Controls.Add(this.lblLimite);
+            this.gpbStatus.Controls.Add(this.lblCadastro);
+            this.gpbStatus.Controls.Add(this.lblStatusLimite);
+            this.gpbStatus.Controls.Add(this.lblNome);
+            this.gpbStatus.Controls.Add(this.lblStatusCadastro);
+            this.gpbStatus.Controls.Add(this.lblEndereco);
+            this.gpbStatus.Controls.Add(this.lblContato);
+            this.gpbStatus.Controls.Add(this.lblDt_Nasc);
+            this.gpbStatus.Controls.Add(this.lblLimiteCredito);
+            this.gpbStatus.Controls.Add(this.lblNroCartao);
+            this.gpbStatus.Location = new System.Drawing.Point(16, 326);
+            this.gpbStatus.Name = "gpbStatus";
+            this.gpbStatus.Size = new System.Drawing.Size(343, 174);
+            this.gpbStatus.TabIndex = 14;
+            this.gpbStatus.TabStop = false;
+            this.gpbStatus.Visible = false;
+            // 
+            // lblLimite
+            // 
+            this.lblLimite.AutoSize = true;
+            this.lblLimite.Location = new System.Drawing.Point(194, 19);
+            this.lblLimite.Name = "lblLimite";
+            this.lblLimite.Size = new System.Drawing.Size(75, 15);
+            this.lblLimite.TabIndex = 13;
+            this.lblLimite.Text = "Status Limite";
+            // 
+            // lblCadastro
+            // 
+            this.lblCadastro.AutoSize = true;
+            this.lblCadastro.Location = new System.Drawing.Point(99, 19);
+            this.lblCadastro.Name = "lblCadastro";
+            this.lblCadastro.Size = new System.Drawing.Size(89, 15);
+            this.lblCadastro.TabIndex = 12;
+            this.lblCadastro.Text = "Status Cadastro";
+            // 
+            // lblStatusLimite
+            // 
+            this.lblStatusLimite.AutoSize = true;
+            this.lblStatusLimite.Location = new System.Drawing.Point(205, 34);
+            this.lblStatusLimite.Name = "lblStatusLimite";
+            this.lblStatusLimite.Size = new System.Drawing.Size(59, 15);
+            this.lblStatusLimite.TabIndex = 11;
+            this.lblStatusLimite.Text = "Resultado";
+            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(13, 288);
+            this.lblNome.Location = new System.Drawing.Point(6, 19);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(38, 15);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "label7";
             // 
+            // lblStatusCadastro
+            // 
+            this.lblStatusCadastro.AutoSize = true;
+            this.lblStatusCadastro.Location = new System.Drawing.Point(120, 34);
+            this.lblStatusCadastro.Name = "lblStatusCadastro";
+            this.lblStatusCadastro.Size = new System.Drawing.Size(59, 15);
+            this.lblStatusCadastro.TabIndex = 10;
+            this.lblStatusCadastro.Text = "Resultado";
+            // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Location = new System.Drawing.Point(12, 313);
+            this.lblEndereco.Location = new System.Drawing.Point(5, 44);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(38, 15);
             this.lblEndereco.TabIndex = 3;
@@ -203,7 +261,7 @@
             // lblContato
             // 
             this.lblContato.AutoSize = true;
-            this.lblContato.Location = new System.Drawing.Point(12, 337);
+            this.lblContato.Location = new System.Drawing.Point(5, 68);
             this.lblContato.Name = "lblContato";
             this.lblContato.Size = new System.Drawing.Size(38, 15);
             this.lblContato.TabIndex = 4;
@@ -212,7 +270,7 @@
             // lblDt_Nasc
             // 
             this.lblDt_Nasc.AutoSize = true;
-            this.lblDt_Nasc.Location = new System.Drawing.Point(13, 362);
+            this.lblDt_Nasc.Location = new System.Drawing.Point(6, 93);
             this.lblDt_Nasc.Name = "lblDt_Nasc";
             this.lblDt_Nasc.Size = new System.Drawing.Size(44, 15);
             this.lblDt_Nasc.TabIndex = 5;
@@ -221,7 +279,7 @@
             // lblLimiteCredito
             // 
             this.lblLimiteCredito.AutoSize = true;
-            this.lblLimiteCredito.Location = new System.Drawing.Point(13, 389);
+            this.lblLimiteCredito.Location = new System.Drawing.Point(6, 120);
             this.lblLimiteCredito.Name = "lblLimiteCredito";
             this.lblLimiteCredito.Size = new System.Drawing.Size(44, 15);
             this.lblLimiteCredito.TabIndex = 6;
@@ -230,71 +288,28 @@
             // lblNroCartao
             // 
             this.lblNroCartao.AutoSize = true;
-            this.lblNroCartao.Location = new System.Drawing.Point(13, 414);
+            this.lblNroCartao.Location = new System.Drawing.Point(6, 145);
             this.lblNroCartao.Name = "lblNroCartao";
             this.lblNroCartao.Size = new System.Drawing.Size(44, 15);
             this.lblNroCartao.TabIndex = 7;
             this.lblNroCartao.Text = "label12";
             // 
-            // lblCadastro
-            // 
-            this.lblCadastro.AutoSize = true;
-            this.lblCadastro.Location = new System.Drawing.Point(206, 288);
-            this.lblCadastro.Name = "lblCadastro";
-            this.lblCadastro.Size = new System.Drawing.Size(89, 15);
-            this.lblCadastro.TabIndex = 8;
-            this.lblCadastro.Text = "Status Cadastro";
-            // 
-            // lblLimite
-            // 
-            this.lblLimite.AutoSize = true;
-            this.lblLimite.Location = new System.Drawing.Point(317, 288);
-            this.lblLimite.Name = "lblLimite";
-            this.lblLimite.Size = new System.Drawing.Size(75, 15);
-            this.lblLimite.TabIndex = 9;
-            this.lblLimite.Text = "Status Limite";
-            // 
-            // lblStatusCadastro
-            // 
-            this.lblStatusCadastro.AutoSize = true;
-            this.lblStatusCadastro.Location = new System.Drawing.Point(206, 313);
-            this.lblStatusCadastro.Name = "lblStatusCadastro";
-            this.lblStatusCadastro.Size = new System.Drawing.Size(59, 15);
-            this.lblStatusCadastro.TabIndex = 10;
-            this.lblStatusCadastro.Text = "Resultado";
-            // 
-            // lblStatusLimite
-            // 
-            this.lblStatusLimite.AutoSize = true;
-            this.lblStatusLimite.Location = new System.Drawing.Point(317, 313);
-            this.lblStatusLimite.Name = "lblStatusLimite";
-            this.lblStatusLimite.Size = new System.Drawing.Size(59, 15);
-            this.lblStatusLimite.TabIndex = 11;
-            this.lblStatusLimite.Text = "Resultado";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 506);
-            this.Controls.Add(this.lblStatusLimite);
-            this.Controls.Add(this.lblStatusCadastro);
-            this.Controls.Add(this.lblLimite);
-            this.Controls.Add(this.lblCadastro);
-            this.Controls.Add(this.lblNroCartao);
-            this.Controls.Add(this.lblLimiteCredito);
-            this.Controls.Add(this.lblDt_Nasc);
-            this.Controls.Add(this.lblContato);
-            this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.lblNome);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(368, 523);
+            this.Controls.Add(this.gpbStatus);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gpbStatus.ResumeLayout(false);
+            this.gpbStatus.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -313,16 +328,17 @@
         private TextBox txbEndereco;
         private TextBox txbNome;
         private Button button1;
+        private DateTimePicker dateTimePicker1;
+        private GroupBox gpbStatus;
+        private Label lblLimite;
+        private Label lblCadastro;
+        private Label lblStatusLimite;
         private Label lblNome;
+        private Label lblStatusCadastro;
         private Label lblEndereco;
         private Label lblContato;
         private Label lblDt_Nasc;
         private Label lblLimiteCredito;
         private Label lblNroCartao;
-        private DateTimePicker dateTimePicker1;
-        private Label lblCadastro;
-        private Label lblLimite;
-        private Label lblStatusCadastro;
-        private Label lblStatusLimite;
     }
 }

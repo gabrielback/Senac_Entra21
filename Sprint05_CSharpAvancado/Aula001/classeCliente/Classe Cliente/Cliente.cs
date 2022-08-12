@@ -84,7 +84,7 @@ namespace Classe_Cliente
                 this.status = "Bloqueado";
             }else
             {
-                this.status = "Liberado";
+                this.status = "Liberado"; 
             }
         }
         public void confirmarCadastro()

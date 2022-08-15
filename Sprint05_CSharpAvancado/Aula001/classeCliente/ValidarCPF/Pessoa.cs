@@ -10,7 +10,7 @@ namespace Cadastro_Escolar
     {
         private int matricula;
         private string nome;
-        private string cpf = "063.169.969-42";
+        private string cpf = "082.125.496-14";
 
         public string Cpf { get => cpf; set => cpf = value; }
         public string Nome { get => nome; set => nome = value; }

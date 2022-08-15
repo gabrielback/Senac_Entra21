@@ -1,3 +1,4 @@
+
 namespace ValidarCPF
 {
     public partial class Form1 : Form
@@ -7,12 +8,10 @@ namespace ValidarCPF
             InitializeComponent();
             
         }
-        Aluno aluno = new Aluno();
-        Professor professor = new Professor();
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine();
         }
     }
 }

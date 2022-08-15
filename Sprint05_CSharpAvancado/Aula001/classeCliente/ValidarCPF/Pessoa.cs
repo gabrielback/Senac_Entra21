@@ -4,47 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-<<<<<<< HEAD
 namespace Cadastro_Escolar
 {
     internal class Pessoa
     {
-        private int Matricula;
-        private string Nome;
-
-        public string getNome()
-        {
-            return Nome;
-        }
-
-        public void setNome(string nome)
-        {
-            this.Nome = nome;
-        }
-        public int getMatricula()
-        {
-            return Matricula;
-        }
-
-        public void setMatricula(int matricula)
-        {
-            this.Matricula = matricula;
-        }
-
-
-=======
-namespace ValidarCPF
-{
-    internal class Pessoa
-    {
-        private string matricula;
+        private int matricula;
         private string nome;
-        private string cpf;
+        private string cpf = "063.169.969-42";
 
-       public void ValidarCPF()
+        public string Cpf { get => cpf; set => cpf = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public int Matricula { get => matricula; set => matricula = value; }
+
+        public string imprimirCpf(string cpf)
         {
-
+            return cpf.Substring(6, 7);
         }
->>>>>>> 4542b3e8006fd1150c18ed1a10352d2ef20c58cb
+
     }
 }

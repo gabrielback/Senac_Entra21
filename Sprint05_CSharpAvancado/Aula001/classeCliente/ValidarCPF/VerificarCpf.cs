@@ -8,7 +8,7 @@ namespace ValidarCPF
 {
     internal class ValidarCpf
     {
-        private string cpf = "063.169.969-42";
+        private string cpf = "082.125.496-14";
         private int primeiroDigitoVerificador;
         private int segundoDigitoVerificador;
 

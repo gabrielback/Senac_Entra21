@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sleep(milliseconds){
+            
+            return new Promise(
+                resolve => setTimeout(resolve, milliseconds)
+                )
+        }
+        async function funcao01(){
+            await sleep(2000)
+            console.log("function 01")
+            funcao02()
+        }
+
+        function funcao02(){
+            console.log("function 02")
+
+        }
+        funcao01();
+    </script>
+</body>
+</html>

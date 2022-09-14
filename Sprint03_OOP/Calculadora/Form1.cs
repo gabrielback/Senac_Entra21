@@ -5,10 +5,10 @@ namespace Calculadora
         public FormCalculadora()
         {
             display.Multiline = true;
-            display.ScrollBars = ScrollBars.Both;
+            //display.ScrollBars = ScrollBars.Both;
 
             //Setup events that listens on keypress
-            display.Text += FormCalculadora_KeyPress;
+            //display.Text += FormCalculadora_KeyPress;
             InitializeComponent();
         }
 
@@ -47,7 +47,9 @@ namespace Calculadora
         {
 
         }
+
         private bool nonNumberEntered = false;
+
         private void FormCalculadora_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             // Initialize the flag to false.
@@ -73,6 +75,11 @@ namespace Calculadora
             {
                 nonNumberEntered = true;
             }
+        }
+
+        private void btn_equal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
